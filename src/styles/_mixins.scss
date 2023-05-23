@@ -1,0 +1,102 @@
+/*  Variables */
+
+// Font weight
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 800;
+$bold: 900;
+
+
+
+// Font size
+
+$f-xxs: 0.50rem;
+$f-xs: 0.75rem;
+$f-sm: 0.875rem;
+$f-md: 1rem;
+$f-lg: 2rem;
+$f-xl: 3rem;
+$f-xxl: 4rem;
+$f-xxxl: 4.5rem;
+
+
+// Color
+
+$black: rgb(0, 0, 0);
+$dark-gray: rgb(51, 51, 51);
+$medium-gray: rgb(102, 102, 102);
+$light-gray: rgb(204, 204, 204);
+
+$warm-yellow: rgb(255, 204, 0);
+$muted-yellow: rgb(255, 204, 153);
+$mango-yellow: rgb(255, 153, 51);
+$green-blue: rgb(0, 120, 140);
+$purple-red: rgb(140, 0, 120);
+$red: rgb(204, 0, 51);
+$forest-green: hsl(120, 45%, 35%);
+
+
+
+/* Animations */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-hover {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(900deg);
+
+    }
+
+
+}
+
+@keyframes rotating_words {
+    10% {
+        transform: translateY(-112%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-212%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-312%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-412%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+
+}

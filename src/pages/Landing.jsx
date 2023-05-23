@@ -1,4 +1,107 @@
+import { useEffect } from "react";
+
 export const Landing = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const neonLine = document.querySelector(".neon-line");
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const landingSectionHeight =
+        document.querySelector(".landing").offsetHeight;
+      const aboutSectionHeight = document.querySelector(".about").offsetHeight;
+      const firstTaskSectionHeight =
+        document.querySelector(".first-task").offsetHeight;
+      const secondTaskSectionHeight =
+        document.querySelector(".second-task").offsetHeight;
+      const thirdTaskSectionHeight =
+        document.querySelector(".third-task").offsetHeight;
+      const finishSectionHeight =
+        document.querySelector(".finish").offsetHeight;
+
+      if (scrollPosition >= 0 && scrollPosition < landingSectionHeight) {
+        neonLine.style.top = "0";
+        neonLine.style.height = `${windowHeight}px`;
+      } else if (
+        scrollPosition >= landingSectionHeight &&
+        scrollPosition < landingSectionHeight + aboutSectionHeight
+      ) {
+        neonLine.style.top = `${windowHeight}px`;
+        neonLine.style.height = `${aboutSectionHeight}px`;
+      } else if (
+        scrollPosition >= landingSectionHeight + aboutSectionHeight &&
+        scrollPosition <
+          landingSectionHeight + aboutSectionHeight + firstTaskSectionHeight
+      ) {
+        neonLine.style.top = `${windowHeight + aboutSectionHeight}px`;
+        neonLine.style.height = `${firstTaskSectionHeight}px`;
+      } else if (
+        scrollPosition >=
+          landingSectionHeight + aboutSectionHeight + firstTaskSectionHeight &&
+        scrollPosition <
+          landingSectionHeight +
+            aboutSectionHeight +
+            firstTaskSectionHeight +
+            secondTaskSectionHeight
+      ) {
+        neonLine.style.top = `${
+          windowHeight + aboutSectionHeight + firstTaskSectionHeight
+        }px`;
+        neonLine.style.height = `${secondTaskSectionHeight}px`;
+      } else if (
+        scrollPosition >=
+          landingSectionHeight +
+            aboutSectionHeight +
+            firstTaskSectionHeight +
+            secondTaskSectionHeight &&
+        scrollPosition <
+          landingSectionHeight +
+            aboutSectionHeight +
+            firstTaskSectionHeight +
+            secondTaskSectionHeight +
+            thirdTaskSectionHeight
+      ) {
+        neonLine.style.top = `${
+          windowHeight +
+          aboutSectionHeight +
+          firstTaskSectionHeight +
+          secondTaskSectionHeight
+        }px`;
+        neonLine.style.height = `${thirdTaskSectionHeight}px`;
+      } else if (
+        scrollPosition >=
+          landingSectionHeight +
+            aboutSectionHeight +
+            firstTaskSectionHeight +
+            secondTaskSectionHeight +
+            thirdTaskSectionHeight &&
+        scrollPosition <
+          landingSectionHeight +
+            aboutSectionHeight +
+            firstTaskSectionHeight +
+            secondTaskSectionHeight +
+            thirdTaskSectionHeight +
+            finishSectionHeight
+      ) {
+        neonLine.style.top = `${
+          windowHeight +
+          aboutSectionHeight +
+          firstTaskSectionHeight +
+          secondTaskSectionHeight +
+          thirdTaskSectionHeight
+        }px`;
+        neonLine.style.height = `${finishSectionHeight}px`;
+      } else {
+        neonLine.style.top = "100vh";
+        neonLine.style.height = "0";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {/* <header>

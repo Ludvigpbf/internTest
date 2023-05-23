@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    background-color: $dark-gray;
+
+    .circle {
+
+
+        .spinning-img {
+            animation: spin 20s linear infinite;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 5em;
+            user-select: none;
+            transition: transform 0.3s;
+
+            &:hover {
+                animation: spin-hover 1s linear infinite;
+                cursor: url('src/assets/cursorHover.png'), pointer;
+            }
+
+        }
+    }
+}

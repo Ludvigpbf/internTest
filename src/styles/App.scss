@@ -1,0 +1,36 @@
+@import "mixins";
+@import "landing";
+@import "taskone";
+@import "tasktwo";
+@import "taskthree";
+@import "taskfour";
+@import "taskfive";
+@import "finish";
+@import "header";
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: url('src/assets/cursor5.png'), pointer;
+}
+
+.neon-line {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100vh;
+    background: linear-gradient(to bottom, $mango-yellow, $muted-yellow, $mango-yellow);
+    box-shadow: 0px 0px 10px $warm-yellow, 0px 0px 15px $warm-yellow, 0px 0px 20px $warm-yellow, 0px 0px 25px $warm-yellow, 0px 0px 30px $warm-yellow, 0px 0px 40px $warm-yellow;
+}
+
+.landing,
+.about,
+.first-task,
+.second-task,
+.third-task,
+.finish {
+    height: 100vh;
+}
