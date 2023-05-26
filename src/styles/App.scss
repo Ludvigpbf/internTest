@@ -1,19 +1,26 @@
 @import "mixins";
 @import "landing";
+@import "about";
 @import "taskone";
 @import "tasktwo";
 @import "taskthree";
-@import "taskfour";
-@import "taskfive";
 @import "finish";
 @import "header";
+
 
 * {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     cursor: url('src/assets/cursor5.png'), pointer;
+
 }
+
+.cursor-click-animation {
+    animation: clickAnimation 0.5s linear;
+}
+
+
 
 .neon-line {
     position: fixed;
@@ -26,11 +33,50 @@
     box-shadow: 0px 0px 10px $warm-yellow, 0px 0px 15px $warm-yellow, 0px 0px 20px $warm-yellow, 0px 0px 25px $warm-yellow, 0px 0px 30px $warm-yellow, 0px 0px 40px $warm-yellow;
 }
 
-.landing,
-.about,
-.first-task,
-.second-task,
-.third-task,
-.finish {
+button {
+    cursor: url('src/assets/cursor5.png'), pointer;
+    transition: cursor 1s;
+
+    &:hover {
+        cursor: url('src/assets/hover.png'), pointer;
+
+    }
+
+    &:active {
+        cursor: url('src/assets/active.png'), pointer;
+    }
+}
+
+
+.app-container {
+
+    position: relative;
     height: 100vh;
+    transition: transform 1.5s ease-in-out;
+
+    .landing,
+    .about,
+    .first-task,
+    .second-task,
+    .third-task,
+    .finish {
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+
+.slide-up {
+    /* transform: translateY(-100%); */
+    animation: rotate-left 0.5s linear;
+}
+
+.slide-in {
+    transform: translateY(0);
+
+}
+
+.slide-out {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
 }

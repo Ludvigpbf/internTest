@@ -21,6 +21,13 @@ export const Header = () => {
           onAnimationEnd={handleAnimationEnd}
         />
       </div>
+      <nav>
+        <button className="hamburger-menu ">
+          <div className="square top-left"></div>
+          <div className="square top-right"></div>
+          <div className="square bottom-right"></div>
+        </button>
+      </nav>
     </header>
   );
 };

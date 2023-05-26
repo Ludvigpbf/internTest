@@ -27,6 +27,7 @@ $f-xxxl: 4.5rem;
 // Color
 
 $black: rgb(0, 0, 0);
+$black-gray: rgb(32, 32, 32);
 $dark-gray: rgb(51, 51, 51);
 $medium-gray: rgb(102, 102, 102);
 $light-gray: rgb(204, 204, 204);
@@ -62,9 +63,9 @@ $forest-green: hsl(120, 45%, 35%);
         transform: rotate(900deg);
 
     }
-
-
 }
+
+
 
 @keyframes rotating_words {
     10% {
@@ -99,4 +100,56 @@ $forest-green: hsl(120, 45%, 35%);
         transform: translateY(-400%);
     }
 
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes lineAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes lineHideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+        display: none;
+    }
+}
+
+@keyframes lineShowAnimation {
+    0% {
+        transform: translateX(100vw);
+        display: block;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
