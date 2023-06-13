@@ -58,30 +58,21 @@
     transform: rotate(180deg);
   }
 }
-@keyframes lineAnimation {
+@keyframes landingLine {
   0% {
-    transform: translateX(0);
+    width: 0%;
   }
   100% {
-    transform: translateX(100vw);
+    width: 210%;
   }
 }
-@keyframes lineHideAnimation {
+@keyframes aboutInLine {
   0% {
-    transform: translateX(0);
+    width: 0%;
+    visibility: visible;
   }
   100% {
-    transform: translateX(100vw);
-    display: none;
-  }
-}
-@keyframes lineShowAnimation {
-  0% {
-    transform: translateX(100vw);
-    display: block;
-  }
-  100% {
-    transform: translateX(0);
+    width: 44.5%;
   }
 }
 .landing {
@@ -103,64 +94,122 @@
 .landing .hero .hello {
   box-sizing: content-box;
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .hello {
+    margin-bottom: 5rem;
+  }
 }
 .landing .hero .hello h1 {
-  color: rgb(255, 153, 51);
-  font-size: 3rem;
-  margin-right: 1rem;
-  font-weight: 400;
+  font-size: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .hello h1 {
+    color: rgb(255, 153, 51);
+    font-size: 3rem;
+    margin-right: 1rem;
+    font-weight: 400;
+  }
 }
 .landing .hero .hello .words {
   overflow: hidden;
-  height: 7vh;
+  height: 2.8vh;
   background-color: rgb(255, 153, 51);
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .hello .words {
+    height: 7vh;
+  }
 }
 .landing .hero .hello .words span {
   display: block;
   color: rgb(51, 51, 51);
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: 800;
-  font-style: italic;
   animation: rotating_words 6s infinite;
   padding: 0rem 0.5rem 0rem 0.5rem;
-  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .hello .words span {
+    font-size: 3rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+  }
+}
+.landing .hero .introduction {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .introduction {
+    flex-grow: 1;
+    width: 40%;
+  }
 }
 .landing .hero .introduction .me {
   color: rgb(204, 204, 204);
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 200;
 }
+@media screen and (min-width: 800px) {
+  .landing .hero .introduction .me {
+    font-size: 2rem;
+  }
+}
 .landing .hero .introduction .me .first-name {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 500;
 }
+@media screen and (min-width: 800px) {
+  .landing .hero .introduction .me .first-name {
+    font-size: 2rem;
+  }
+}
 .landing .hero .introduction .introduction-text {
-  font-size: 1rem;
-  width: 20rem;
+  font-size: 0.5rem;
+  width: 10rem;
   margin: 0rem;
   color: rgb(204, 204, 204);
   font-weight: 200;
 }
+@media screen and (min-width: 800px) {
+  .landing .hero .introduction .introduction-text {
+    font-size: 1rem;
+    width: 20rem;
+  }
+}
 .landing .hero .introduction .introduction-text .work-title {
   color: rgb(255, 153, 51);
-  font-size: 1rem;
+  font-size: 0.5rem;
   line-height: 1.5rem;
   font-weight: 500;
   font-style: italic;
 }
+@media screen and (min-width: 800px) {
+  .landing .hero .introduction .introduction-text .work-title {
+    font-size: 1rem;
+  }
+}
 .landing .hero .continue {
   display: flex;
   align-items: center;
+  width: 50%;
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+  position: relative;
 }
 .landing .hero .continue .match {
   color: rgb(204, 204, 204);
   font-size: 1rem;
-  /*  line-height: 1.5rem; */
   font-weight: 400;
 }
 .landing .hero .continue .find-out {
@@ -174,40 +223,41 @@
   padding: 0.5rem;
 }
 .landing .hero .continue .find-out:hover {
-  border: 1px solid rgb(255, 204, 153);
+  border: 1px solid rgb(255, 153, 51);
   border-radius: 0.5rem;
   cursor: url("src/assets/hover.png"), pointer;
-  text-shadow: 0px 0px 5px rgb(0, 0, 0), 0px 0px 10px rgb(255, 204, 153), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0);
-  box-shadow: 0px 0px 10px rgb(255, 204, 0);
+  box-shadow: 0px 0px 5px rgb(255, 204, 153), 0px 0px 0px rgb(255, 204, 0), 0px 0px 0px rgb(255, 204, 0);
 }
-.landing .hero .continue .line-horizontal {
+.landing .hero .continue .landing-line {
+  display: none;
+  position: absolute;
+  left: 66%;
   width: 10rem;
   height: 1px;
-  background: linear-gradient(to bottom, rgb(255, 153, 51), rgb(255, 204, 153), rgb(255, 153, 51));
-  box-shadow: 0px 0px 10px rgb(255, 204, 0), 0px 0px 15px rgb(255, 204, 0), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0), 0px 0px 30px rgb(255, 204, 0), 0px 0px 40px rgb(255, 204, 0);
-  animation: lineAnimation 0.3s ease-in-out forwards;
-}
-.landing .hero .continue .hide-line {
-  display: none;
-  transform: translateX(0);
-  /* animation-name: lineHideAnimation; */
+  background-color: rgb(255, 153, 51);
+  box-shadow: 0px 0px 10px rgb(255, 204, 153), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0);
+  animation: landingLine 2.5s forwards;
 }
 .landing .hero .continue .show-line {
   display: block;
-  transform: translateX(100vw);
-  /* animation-name: lineShowAnimation; */
 }
 .landing .silhouette {
   display: flex;
   flex-direction: column;
 }
 .landing .silhouette img {
-  opacity: 1;
+  width: 50%;
+  height: auto;
+}
+@media screen and (min-width: 800px) {
+  .landing .silhouette img {
+    width: 100%;
+  }
 }
 
 .about {
   display: flex;
-  background: linear-gradient(243.18deg, #202020 0%, #373737 100%);
+  background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
 }
 .about .about-content {
   display: flex;
@@ -220,30 +270,49 @@
   padding-right: 30rem;
 }
 .about .about-content .who-card .who-title {
-  color: black;
+  color: rgb(255, 153, 51);
   font-size: 3rem;
   margin-right: 1rem;
   font-weight: 400;
 }
 .about .about-content .who-card .who-info {
   width: 25rem;
+  color: rgb(204, 204, 204);
 }
 .about .about-content .what-card {
   padding-left: 30rem;
 }
 .about .about-content .what-card .what-title {
-  color: black;
+  color: rgb(255, 153, 51);
   font-size: 3rem;
   margin-right: 1rem;
   font-weight: 400;
 }
 .about .about-content .what-card .what-info {
   width: 25rem;
+  color: rgb(204, 204, 204);
 }
-.about .about-content .start {
+.about .about-content .button-container {
+  display: flex;
+  align-items: center;
+  /* margin-top: auto; */
+  margin-bottom: -3rem;
+}
+.about .about-content .button-container .about-in-line {
+  display: block;
+  position: absolute;
+  left: 0%;
+  width: 10rem;
+  height: 1px;
+  background-color: rgb(255, 153, 51);
+  box-shadow: 0px 0px 10px rgb(255, 204, 153), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0);
+  animation: aboutInLine 2.5s forwards;
+  animation-delay: 1s;
+}
+.about .about-content .button-container .start {
   position: relative;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid rgb(255, 153, 51);
   border-radius: 1rem;
   color: rgb(255, 153, 51);
   font-size: 1rem;
@@ -251,22 +320,132 @@
   font-weight: 400;
   padding: 0.5rem;
   text-align: center;
-}
-.about .about-content .start:hover {
-  border: 1px solid rgb(255, 153, 51);
-  border-radius: 0.5rem;
-  cursor: url("src/assets/cursorHover.png"), pointer;
-  text-shadow: 0px 0px 5px rgb(0, 0, 0), 0px 0px 10px rgb(255, 204, 153), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0);
+  animation: flicker 0.3s infinite alternate;
+  box-shadow: 0px 0px 5px rgb(255, 204, 153), 0px 0px 0px rgb(255, 204, 0), 0px 0px 0px rgb(255, 204, 0);
 }
 
 .task-one {
-  background-color: white;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  display: flex;
+  background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+  align-items: center;
+  justify-content: center;
 }
 .task-one h1 {
-  color: black;
+  color: rgb(255, 153, 51);
+  font-size: 3rem;
+}
+.task-one .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.task-one form {
+  margin-top: 30px;
+}
+.task-one .question {
+  margin-bottom: 20px;
+}
+.task-one .question p {
+  font-weight: bold;
+  color: rgb(255, 153, 51);
+}
+.task-one .question input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+.task-one button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: rgb(255, 153, 51);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.task-one button:hover {
+  background-color: #555;
+}
+.task-one h2 {
+  color: rgb(255, 153, 51);
+  margin: 2rem;
+  opacity: 0.4;
+}
+
+.task-two {
+  display: flex;
+  background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+  align-items: center;
+  justify-content: center;
+}
+.task-two h1 {
+  color: rgb(255, 153, 51);
+  font-size: 3rem;
+}
+.task-two .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.task-two form {
+  margin-top: 30px;
+}
+.task-two .question {
+  margin-bottom: 20px;
+}
+.task-two .question p {
+  font-weight: bold;
+  color: rgb(255, 153, 51);
+}
+.task-two .question input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+.task-two button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: rgb(255, 153, 51);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.task-two button:hover {
+  background-color: #555;
+}
+.task-two h2 {
+  color: rgb(255, 153, 51);
+  margin: 2rem;
+  opacity: 0.4;
+}
+
+.task-three {
+  background-color: rgb(39, 72, 181);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-three h1 {
+  color: red;
+  font-size: 3rem;
+}
+
+.finish {
+  background-color: rgb(244, 221, 49);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.finish h1 {
+  color: red;
+  font-size: 3rem;
 }
 
 header {
@@ -324,10 +503,6 @@ header nav .hamburger-menu .bottom-right {
   cursor: url("src/assets/cursor5.png"), pointer;
 }
 
-.cursor-click-animation {
-  animation: clickAnimation 0.5s linear;
-}
-
 .neon-line {
   position: fixed;
   top: 0;
@@ -350,21 +525,6 @@ button:active {
   cursor: url("src/assets/active.png"), pointer;
 }
 
-.app-container {
-  position: relative;
-  height: 100vh;
-  transition: transform 1.5s ease-in-out;
-}
-.app-container .landing,
-.app-container .about,
-.app-container .first-task,
-.app-container .second-task,
-.app-container .third-task,
-.app-container .finish {
-  height: 100vh;
-  width: 100%;
-}
-
 .slide-up {
   /* transform: translateY(-100%); */
   animation: rotate-left 0.5s linear;
@@ -377,4 +537,89 @@ button:active {
 .slide-out {
   transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
+}
+
+#root {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(87, 87, 87);
+}
+#root .wrapper {
+  height: 100vh;
+  width: 100%;
+  perspective: 2000px;
+  /* overflow: hidden; */
+}
+#root .wrapper .app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  /* .task-one {
+
+      display: none;
+  } */
+}
+#root .wrapper .app-container .app-face {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+#root .wrapper .app-container .landing {
+  transform: rotateY(0deg) translateZ(0px);
+}
+#root .wrapper .app-container .landing-animation {
+  animation: hide-landing 2.5s forwards ease-in-out;
+}
+@keyframes hide-landing {
+  0% {
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  20% {
+    transform: rotateY(0deg) translateZ(-200px);
+  }
+  80% {
+    transform: rotateY(-90deg) translateX(-1100px) translateZ(760px);
+  }
+  100% {
+    transform: rotateY(-90deg) translateX(-765px) translateZ(768px);
+  }
+}
+#root .wrapper .app-container .about {
+  transform: rotateY(90deg) translateX(770px) translateZ(760px);
+}
+#root .wrapper .app-container .about-animation {
+  animation: show-about 2.5s forwards ease-in-out;
+}
+@keyframes show-about {
+  0% {
+    transform: rotateY(90deg) translateX(770px) translateZ(760px);
+  }
+  20% {
+    transform: rotateY(90deg) translateX(1000px) translateZ(760px);
+  }
+  80% {
+    transform: rotateY(0deg) translateZ(-330px);
+  }
+  100% {
+    transform: rotateY(0deg) translateZ(0px);
+  }
+}
+#root .wrapper .app-container .task-two {
+  display: none;
+}
+#root .wrapper .app-container .task-three {
+  height: 100vh;
+  width: 100%;
+  transform: rotateX(90deg) translateZ(50%);
+  display: none;
+}
+#root .wrapper .app-container .finish {
+  height: 100vh;
+  width: 100%;
+  transform: rotateX(-90deg) translateZ(50%);
+  display: none;
 }/*# sourceMappingURL=App.css.map */

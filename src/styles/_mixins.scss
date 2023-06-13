@@ -122,34 +122,23 @@ $forest-green: hsl(120, 45%, 35%);
     }
 }
 
-@keyframes lineAnimation {
+@keyframes landingLine {
     0% {
-        transform: translateX(0);
+        width: 0%;
     }
 
     100% {
-        transform: translateX(100vw);
+        width: 210%;
     }
 }
 
-@keyframes lineHideAnimation {
+@keyframes aboutInLine {
     0% {
-        transform: translateX(0);
+        width: 0%;
+        visibility: visible;
     }
 
     100% {
-        transform: translateX(100vw);
-        display: none;
-    }
-}
-
-@keyframes lineShowAnimation {
-    0% {
-        transform: translateX(100vw);
-        display: block;
-    }
-
-    100% {
-        transform: translateX(0);
+        width: 44.5%;
     }
 }

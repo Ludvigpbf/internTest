@@ -15,34 +15,55 @@
         width: 60%;
         height: 100%;
 
+
         .hello {
             box-sizing: content-box;
             display: flex;
-            margin-bottom: 5rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+
+            @include desktop {
+                margin-bottom: 5rem;
+            }
 
             h1 {
-                color: $mango-yellow;
-                font-size: $f-xl;
-                margin-right: 1rem;
-                font-weight: $regular;
+                font-size: $f-md;
+
+                @include desktop {
+                    color: $mango-yellow;
+                    font-size: $f-xl;
+                    margin-right: 1rem;
+                    font-weight: $regular;
+                }
 
             }
 
             .words {
                 overflow: hidden;
-                height: 7vh;
+                height: 2.8vh;
                 background-color: $mango-yellow ;
                 border-radius: 0.5rem;
+
+                @include desktop {
+                    height: 7vh;
+                }
 
                 span {
                     display: block;
                     color: $dark-gray;
-                    font-size: $f-xl;
+                    font-size: $f-md;
                     font-weight: $semi-bold;
-                    font-style: italic;
                     animation: rotating_words 6s infinite;
                     padding: 0rem 0.5rem 0rem 0.5rem;
-                    text-align: center;
+
+
+                    @include desktop {
+                        font-size: $f-xl;
+                        padding: 0rem 0.5rem 0rem 0.5rem;
+
+                    }
                 }
             }
 
@@ -50,39 +71,63 @@
         }
 
         .introduction {
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
 
+            @include desktop {
+                flex-grow: 1;
+                width: 40%;
+            }
 
             .me {
                 color: $light-gray;
-                font-size: $f-lg;
+                font-size: $f-md;
                 margin-bottom: 1rem;
                 font-weight: $extra-light;
 
+                @include desktop {
+                    font-size: $f-lg;
+                }
 
                 .first-name {
                     color: $mango-yellow;
-                    font-size: $f-lg;
+                    font-size: $f-md;
                     font-style: italic;
                     font-weight: $medium;
+
+                    @include desktop {
+                        font-size: $f-lg;
+                    }
                 }
 
             }
 
             .introduction-text {
-                font-size: $f-md;
-                width: 20rem;
+                font-size: $f-xxs;
+                width: 10rem;
                 margin: 0rem;
                 color: $light-gray;
                 font-weight: $extra-light;
+
+                @include desktop {
+                    font-size: $f-md;
+                    width: 20rem;
+                }
 
 
 
                 .work-title {
                     color: $mango-yellow;
-                    font-size: $f-md;
+                    font-size: $f-xxs;
                     line-height: 1.5rem;
                     font-weight: $medium;
                     font-style: italic;
+
+                    @include desktop {
+                        font-size: $f-md;
+                    }
 
 
                 }
@@ -93,13 +138,15 @@
         .continue {
             display: flex;
             align-items: center;
+            width: 50%;
+            margin-bottom: 1rem;
+            margin-left: 6rem;
+            position: relative;
 
             .match {
                 color: $light-gray;
                 font-size: $f-md;
-                /*  line-height: 1.5rem; */
                 font-weight: $regular;
-
 
             }
 
@@ -115,38 +162,33 @@
 
 
                 &:hover {
-                    border: 1px solid $muted-yellow;
+                    border: 1px solid $mango-yellow;
                     border-radius: 0.5rem;
                     cursor: url('src/assets/hover.png'), pointer;
-                    text-shadow: 0px 0px 5px $black,
-                        0px 0px 10px $muted-yellow,
-                        0px 0px 20px $warm-yellow,
-                        0px 0px 25px $warm-yellow, ;
-                    box-shadow: 0px 0px 10px $warm-yellow;
+
+                    box-shadow: 0px 0px 5px $muted-yellow,
+                        0px 0px 0px $warm-yellow, 0px 0px 0px $warm-yellow;
                 }
-
-
             }
 
-            .line-horizontal {
+            .landing-line {
+                display: none;
+                position: absolute;
+                left: 66%;
                 width: 10rem;
                 height: 1px;
-                background: linear-gradient(to bottom, $mango-yellow, $muted-yellow, $mango-yellow);
-                box-shadow: 0px 0px 10px $warm-yellow, 0px 0px 15px $warm-yellow, 0px 0px 20px $warm-yellow, 0px 0px 25px $warm-yellow, 0px 0px 30px $warm-yellow, 0px 0px 40px $warm-yellow;
-                animation: lineAnimation 0.3s ease-in-out forwards;
-            }
-
-            .hide-line {
-                display: none;
-                transform: translateX(0);
-                /* animation-name: lineHideAnimation; */
+                background-color: $mango-yellow;
+                box-shadow:
+                    0px 0px 10px $muted-yellow,
+                    0px 0px 20px $warm-yellow,
+                    0px 0px 25px $warm-yellow, ;
+                animation: landingLine 2.5s forwards;
             }
 
             .show-line {
                 display: block;
-                transform: translateX(100vw);
-                /* animation-name: lineShowAnimation; */
             }
+
         }
     }
 
@@ -155,7 +197,14 @@
         flex-direction: column;
 
         img {
-            opacity: 1;
+            width: 50%;
+            height: auto;
+
+            @include desktop {
+                width: 100%;
+
+            }
+
 
 
         }

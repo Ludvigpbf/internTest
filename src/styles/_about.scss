@@ -1,6 +1,6 @@
 .about {
     display: flex;
-    background: linear-gradient(243.18deg, #202020 0%, #373737 100%);
+    background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
 
     .about-content {
         display: flex;
@@ -13,7 +13,7 @@
             padding-right: 30rem;
 
             .who-title {
-                color: black;
+                color: $mango-yellow;
                 font-size: $f-xl;
                 margin-right: 1rem;
                 font-weight: $regular;
@@ -21,6 +21,7 @@
 
             .who-info {
                 width: 25rem;
+                color: $light-gray;
             }
         }
 
@@ -28,7 +29,7 @@
             padding-left: 30rem;
 
             .what-title {
-                color: black;
+                color: $mango-yellow;
                 font-size: $f-xl;
                 margin-right: 1rem;
                 font-weight: $regular;
@@ -36,37 +37,55 @@
 
             .what-info {
                 width: 25rem;
+                color: $light-gray
             }
         }
 
 
 
+        .button-container {
+            display: flex;
+            align-items: center;
+            /* margin-top: auto; */
+            margin-bottom: -3rem;
 
-
-        .start {
-            position: relative;
-            background-color: transparent;
-            border: 1px solid transparent;
-            border-radius: 1rem;
-            color: $mango-yellow;
-            font-size: $f-md;
-            line-height: 1.5rem;
-            font-weight: $regular;
-            padding: 0.5rem;
-            text-align: center;
-
-
-            &:hover {
-                border: 1px solid $mango-yellow;
-                border-radius: 0.5rem;
-                cursor: url('src/assets/cursorHover.png'), pointer;
-                text-shadow: 0px 0px 5px $black,
+            .about-in-line {
+                display: block;
+                position: absolute;
+                left: 0%;
+                width: 10rem;
+                height: 1px;
+                background-color: $mango-yellow;
+                box-shadow:
                     0px 0px 10px $muted-yellow,
                     0px 0px 20px $warm-yellow,
-                    0px 0px 25px $warm-yellow,
-
+                    0px 0px 25px $warm-yellow, ;
+                animation: aboutInLine 2.5s forwards;
+                animation-delay: 1s;
 
             }
+
+
+
+            .start {
+                position: relative;
+                background-color: transparent;
+                border: 1px solid $mango-yellow;
+                border-radius: 1rem;
+                color: $mango-yellow;
+                font-size: $f-md;
+                line-height: 1.5rem;
+                font-weight: $regular;
+                padding: 0.5rem;
+                text-align: center;
+                animation: flicker 0.3s infinite alternate;
+
+                box-shadow: 0px 0px 5px $muted-yellow,
+                    0px 0px 0px $warm-yellow, 0px 0px 0px $warm-yellow;
+
+            }
+
+
         }
     }
 }

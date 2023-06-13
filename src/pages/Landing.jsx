@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export const Landing = ({ onToggleLanding }) => {
-  const [isHovered, setIsHovered] = useState(false);
+// eslint-disable-next-line react/prop-types
+export const Landing = ({ onClickNext }) => {
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
@@ -30,41 +31,22 @@ export const Landing = ({ onToggleLanding }) => {
             creative and have a good balance between playfullness and
             professionalism.
             <br /> <br />
-            {/* <span className="match">Are we a match?</span>{" "}
-            <button
-              className="find-out"
-              onClick={onToggleLanding}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              Lets find out!
-            </button>
-            <div
-              className={
-                isHovered
-                  ? "line-horizontal show-line"
-                  : "line-horizontal hide-line"
-              }
-            ></div> */}
           </p>
         </div>
         <div className="continue">
           <p className="match">Are we a match?</p>{" "}
           <button
             className="find-out"
-            onClick={onToggleLanding}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => {
+              onClickNext();
+              setIsClicked(true);
+            }}
           >
             Lets find out!
           </button>
-          <div
-            className={
-              isHovered
-                ? "line-horizontal show-line"
-                : "line-horizontal hide-line"
-            }
-          ></div>
+          <span
+            className={isClicked ? "landing-line show-line" : "landing-line"}
+          ></span>
         </div>
       </div>
       <div className="silhouette">

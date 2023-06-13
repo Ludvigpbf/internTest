@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
-export const About = ({ onToggleTaskOne }) => {
+// eslint-disable-next-line react/prop-types
+export const About = ({ onToggleTaskOne, showLine }) => {
   const handleClick = () => {
     onToggleTaskOne();
   };
@@ -27,9 +28,12 @@ export const About = ({ onToggleTaskOne }) => {
           you manage to solve them all i think we are a match.
         </p>
       </div>
-      <button className="start" onClick={handleClick}>
-        Lets get started
-      </button>
+      <div className="button-container">
+        {showLine && <span className="about-in-line"></span>}
+        <button className="start" onClick={handleClick}>
+          Lets get started
+        </button>
+      </div>
     </div>
   );
 };
