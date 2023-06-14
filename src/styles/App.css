@@ -72,7 +72,7 @@
     visibility: visible;
   }
   100% {
-    width: 44.5%;
+    width: 45.3%;
   }
 }
 .landing {
@@ -306,13 +306,13 @@
   height: 1px;
   background-color: rgb(255, 153, 51);
   box-shadow: 0px 0px 10px rgb(255, 204, 153), 0px 0px 20px rgb(255, 204, 0), 0px 0px 25px rgb(255, 204, 0);
-  animation: aboutInLine 2.5s forwards;
+  animation: aboutInLine 2.5s ease-in-out forwards;
   animation-delay: 1s;
 }
 .about .about-content .button-container .start {
   position: relative;
   background-color: transparent;
-  border: 1px solid rgb(255, 153, 51);
+  border: 2px solid rgb(255, 153, 51);
   border-radius: 1rem;
   color: rgb(255, 153, 51);
   font-size: 1rem;
@@ -320,8 +320,13 @@
   font-weight: 400;
   padding: 0.5rem;
   text-align: center;
-  animation: flicker 0.3s infinite alternate;
-  box-shadow: 0px 0px 5px rgb(255, 204, 153), 0px 0px 0px rgb(255, 204, 0), 0px 0px 0px rgb(255, 204, 0);
+  box-shadow: 0px 0px 10px rgb(255, 153, 51), inset 0px 0px 10px rgb(255, 153, 51);
+}
+.about .about-content .button-container .start:hover {
+  box-shadow: 0px 0px 15px rgb(255, 153, 51), inset 0px 0px 15px rgb(255, 153, 51);
+}
+.about .about-content .button-container .about-line-out {
+  animation: aboutLineOut 2.5s forwards;
 }
 
 .task-one {
@@ -437,14 +442,36 @@
   font-size: 3rem;
 }
 
+.loading {
+  background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading h1 {
+  color: rgb(255, 153, 51);
+  font-size: 3rem;
+}
+
+.result-greeting {
+  background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result-greeting h1 {
+  color: rgb(255, 153, 51);
+  font-size: 3rem;
+}
+
 .finish {
-  background-color: rgb(244, 221, 49);
+  background: linear-gradient(243.18deg, #202020 0%, #373737 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .finish h1 {
-  color: red;
+  color: rgb(255, 153, 51);
   font-size: 3rem;
 }
 
@@ -542,13 +569,13 @@ button:active {
 #root {
   height: 100vh;
   width: 100%;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(22, 22, 22);
 }
 #root .wrapper {
   height: 100vh;
   width: 100%;
   perspective: 2000px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #root .wrapper .app-container {
   display: flex;
@@ -558,20 +585,53 @@ button:active {
   height: 100%;
   transform-style: preserve-3d;
   position: relative;
-  /* .task-one {
-
-      display: none;
-  } */
+  transform: translateZ(-2000px) rotateY(0deg) rotateX(0deg);
+  animation: container-animation 2.5s forwards ease-in-out;
+}
+@keyframes container-animation {
+  0% {
+    transform: translateZ(-767px) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-1000px) rotateX(-10deg) rotateY(0deg);
+  }
+  80% {
+    transform: translateZ(-1000px) rotateX(-5deg) rotateY(-90deg);
+  }
+  100% {
+    transform: translateZ(-767px) rotateY(-90deg);
+  }
 }
 #root .wrapper .app-container .app-face {
   position: absolute;
   height: 100vh;
   width: 100%;
+  /* opacity: 0.6; */
 }
 #root .wrapper .app-container .landing {
-  transform: rotateY(0deg) translateZ(0px);
+  transform: rotateY(0deg) translateZ(767px);
 }
-#root .wrapper .app-container .landing-animation {
+#root .wrapper .app-container .about {
+  transform: rotateY(90deg) translateZ(767px);
+}
+#root .wrapper .app-container .form {
+  transform: rotateY(180deg) translateZ(767px);
+  overflow: hidden;
+}
+#root .wrapper .app-container .loading {
+  height: 188vh;
+  transform: rotateX(90deg) rotateY(180deg) translateZ(408px);
+}
+#root .wrapper .app-container .result-greeting {
+  transform: rotateY(-90deg) translateZ(767px);
+}
+#root .wrapper .app-container .finish {
+  overflow: hidden;
+  height: 188vh;
+  transform: rotateX(90deg) translateZ(408px);
+}
+
+.landing-animation {
   animation: hide-landing 2.5s forwards ease-in-out;
 }
 @keyframes hide-landing {
@@ -588,10 +648,8 @@ button:active {
     transform: rotateY(-90deg) translateX(-765px) translateZ(768px);
   }
 }
-#root .wrapper .app-container .about {
-  transform: rotateY(90deg) translateX(770px) translateZ(760px);
-}
-#root .wrapper .app-container .about-animation {
+
+.about-animation {
   animation: show-about 2.5s forwards ease-in-out;
 }
 @keyframes show-about {
@@ -607,19 +665,4 @@ button:active {
   100% {
     transform: rotateY(0deg) translateZ(0px);
   }
-}
-#root .wrapper .app-container .task-two {
-  display: none;
-}
-#root .wrapper .app-container .task-three {
-  height: 100vh;
-  width: 100%;
-  transform: rotateX(90deg) translateZ(50%);
-  display: none;
-}
-#root .wrapper .app-container .finish {
-  height: 100vh;
-  width: 100%;
-  transform: rotateX(-90deg) translateZ(50%);
-  display: none;
 }/*# sourceMappingURL=App.css.map */

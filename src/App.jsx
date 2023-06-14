@@ -4,41 +4,11 @@ import Header from "./components/Header.jsx";
 import Landing from "./pages/Landing.jsx";
 import About from "./pages/About.jsx";
 import Form from "./pages/Form.jsx";
+import Loading from "./pages/Loading.jsx";
+import ResultGreeting from "./pages/ResultGreeting.jsx";
 import Finish from "./pages/Finish.jsx";
 
 function App() {
-  /* const [showLanding, setShowLanding] = useState(true);
-  const [showAbout, setShowAbout] = useState(false);
-  const [showTasks, setShowTasks] = useState(false);
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleToggleLanding = () => {
-    setShowLanding(false);
-    setShowAbout(true);
-  };
-  const handleToggleTasks = () => {
-    setShowTasks(true);
-  };
-
-  const handleMouseMove = (event) => {
-    setCursorPosition({ x: event.clientX, y: event.clientY });
-  };
-
-  const handleClick = () => {
-    setIsClicked(true);
-    setTimeout(() => {
-      setIsClicked(false);
-    }, 500); // Adjust the duration based on your animation timing
-  };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []); */
-
   const [next, setNext] = useState(false);
   const [showLine, setShowLine] = useState(false);
   const handleClickNext = () => {
@@ -60,11 +30,19 @@ function App() {
             className={`app-face about ${next ? "about-animation" : ""}`}
           >
             <Header />
-            <About showLine={showLine} />
+            <About onClickNext={handleClickNext} showLine={showLine} />
           </section>
-          <section className="app-face form">
+          <section className={`app-face form ${next ? "form-animation" : ""}`}>
             <Header />
-            <Form />
+            <Form onClickNext={handleClickNext} />
+          </section>
+          <section className="app-face loading">
+            <Header />
+            <Loading />
+          </section>
+          <section className="app-face result-greeting">
+            <Header />
+            <ResultGreeting />
           </section>
           <section className="app-face finish">
             <Header />

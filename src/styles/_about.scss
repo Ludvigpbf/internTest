@@ -17,6 +17,7 @@
                 font-size: $f-xl;
                 margin-right: 1rem;
                 font-weight: $regular;
+
             }
 
             .who-info {
@@ -33,6 +34,7 @@
                 font-size: $f-xl;
                 margin-right: 1rem;
                 font-weight: $regular;
+
             }
 
             .what-info {
@@ -60,17 +62,17 @@
                     0px 0px 10px $muted-yellow,
                     0px 0px 20px $warm-yellow,
                     0px 0px 25px $warm-yellow, ;
-                animation: aboutInLine 2.5s forwards;
+                animation: aboutInLine 2.5s ease-in-out forwards;
                 animation-delay: 1s;
-
             }
+
 
 
 
             .start {
                 position: relative;
                 background-color: transparent;
-                border: 1px solid $mango-yellow;
+                border: 2px solid $mango-yellow;
                 border-radius: 1rem;
                 color: $mango-yellow;
                 font-size: $f-md;
@@ -78,11 +80,17 @@
                 font-weight: $regular;
                 padding: 0.5rem;
                 text-align: center;
-                animation: flicker 0.3s infinite alternate;
+                box-shadow: 0px 0px 10px $mango-yellow, inset 0px 0px 10px $mango-yellow;
 
-                box-shadow: 0px 0px 5px $muted-yellow,
-                    0px 0px 0px $warm-yellow, 0px 0px 0px $warm-yellow;
+                &:hover {
+                    box-shadow: 0px 0px 15px $mango-yellow, inset 0px 0px 15px $mango-yellow;
+                }
+            }
 
+
+
+            .about-line-out {
+                animation: aboutLineOut 2.5s forwards;
             }
 
 

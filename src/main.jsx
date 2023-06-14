@@ -6,6 +6,8 @@ import Header from "./components/Header.jsx";
 import Landing from "./pages/Landing.jsx";
 import About from "./pages/About.jsx";
 import Form from "./pages/Form.jsx";
+import Loading from "./pages/Loading.jsx";
+import ResultGreeting from "./pages/ResultGreeting.jsx";
 import Finish from "./pages/Finish.jsx";
 
 const router = createBrowserRouter([
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "/form",
         element: <Form />,
+      },
+      {
+        path: "/loading",
+        element: <Loading />,
+      },
+      {
+        path: "/result-greeting",
+        element: <ResultGreeting />,
       },
       {
         path: "/finish",

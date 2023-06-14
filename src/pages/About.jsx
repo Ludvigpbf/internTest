@@ -30,7 +30,7 @@ export const About = ({ onToggleTaskOne, showLine }) => {
       </div>
       <div className="button-container">
         {showLine && <span className="about-in-line"></span>}
-        <button className="start" onClick={handleClick}>
+        <button className="start about-line-out" onClick={handleClick}>
           Lets get started
         </button>
       </div>
