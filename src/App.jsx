@@ -9,44 +9,69 @@ import ResultGreeting from "./pages/ResultGreeting.jsx";
 import Finish from "./pages/Finish.jsx";
 
 function App() {
-  const [next, setNext] = useState(false);
+  const [currentPage, setCurrentPage] = useState("landing");
   const [showLine, setShowLine] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
   const handleClickNext = () => {
-    setNext((prevNext) => !prevNext);
     setShowLine(true);
+    setIsClicked(true);
+
+    if (currentPage === "landing") {
+      setCurrentPage("about");
+    } else if (currentPage === "about") {
+      setCurrentPage("form");
+    } else if (currentPage === "form") {
+      setCurrentPage("loading");
+    } else if (currentPage === "loading") {
+      setCurrentPage("result-greeting");
+    } else if (currentPage === "result-greeting") {
+      setCurrentPage("finish");
+    }
   };
+
+  const getPageAnimationClass = (pageName) => {
+    if (pageName === "about") {
+      return isClicked ? "right-animation" : "";
+    } else if (pageName === "form") {
+      return isClicked ? "back-animation" : "";
+    } else if (pageName === "loading") {
+      return isClicked ? "bottom-animation" : "";
+    } else if (pageName === "result-greeting") {
+      return isClicked ? "left-animation" : "";
+    } else if (pageName === "finish") {
+      return isClicked ? "top-animation" : "";
+    }
+    return "";
+  };
+
+  const containerAnimationClass = getPageAnimationClass(currentPage);
 
   return (
     <>
       <div className="wrapper">
-        <div className="app-container">
-          <section
-            className={`app-face landing ${next ? "landing-animation" : ""}`}
-          >
+        <div className={`app-container ${containerAnimationClass}`}>
+          <section className="app-face landing">
             <Header />
-            <Landing onClickNext={handleClickNext} />
+            <Landing onClickNext={handleClickNext} isClicked={isClicked} />
           </section>
-          <section
-            className={`app-face about ${next ? "about-animation" : ""}`}
-          >
+          <section className="app-face about">
             <Header />
             <About onClickNext={handleClickNext} showLine={showLine} />
           </section>
-          <section className={`app-face form ${next ? "form-animation" : ""}`}>
+          <section className="app-face form">
             <Header />
             <Form onClickNext={handleClickNext} />
           </section>
           <section className="app-face loading">
-            <Header />
-            <Loading />
+            <Loading onClickNext={handleClickNext} />
           </section>
           <section className="app-face result-greeting">
             <Header />
-            <ResultGreeting />
+            <ResultGreeting onClickNext={handleClickNext} />
           </section>
           <section className="app-face finish">
-            <Header />
-            <Finish />
+            <Finish onClickNext={handleClickNext} />
           </section>
         </div>
       </div>

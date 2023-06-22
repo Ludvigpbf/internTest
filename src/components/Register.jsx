@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export const Register = () => {
+// eslint-disable-next-line react/prop-types
+export const Register = ({ nextQuestion }) => {
   const [answers, setAnswers] = useState({
     name: "",
     email: "",
@@ -19,7 +20,9 @@ export const Register = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Questionnaire answers:", answers);
+    nextQuestion(); // Call the nextQuestion function from the prop
   };
+
   return (
     <div className="container">
       <h1>Who are you?</h1>

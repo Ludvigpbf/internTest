@@ -1,27 +1,43 @@
-/* import PropTypes from "prop-types";
-import { useState } from "react"; */
+import { useState } from "react";
 import Register from "../components/Register.jsx";
 import TaskOne from "../components/TaskOne.jsx";
 import TaskTwo from "../components/TaskTwo.jsx";
 import TaskThree from "../components/TaskThree.jsx";
 
 // eslint-disable-next-line react/prop-types
-export const Form = () => {
+export const Form = ({ onClickNext }) => {
+  const [formClass, setFormClass] = useState("");
+
+  const handleFormClass = (className) => {
+    setFormClass(className);
+  };
+
+  const handleNextButton = () => {
+    if (formClass === "") {
+      handleFormClass("question-one");
+    } else if (formClass === "question-one") {
+      handleFormClass("question-two");
+    } else if (formClass === "question-two") {
+      handleFormClass("question-three");
+    }
+    // Add more conditions for subsequent clicks if needed
+  };
+
   return (
-    <>
-      <section className="task-one">
-        <Register></Register>
+    <div className={`form-container ${formClass}`}>
+      <section className="register">
+        <Register nextQuestion={(className) => handleNextButton(className)} />
       </section>
       <section className="task-one">
-        <TaskOne></TaskOne>
+        <TaskOne nextQuestion={(className) => handleNextButton(className)} />
       </section>
-      <section className="task-one">
-        <TaskTwo></TaskTwo>
+      <section className="task-two">
+        <TaskTwo nextQuestion={(className) => handleNextButton(className)} />
       </section>
-      <section className="task-one">
-        <TaskThree></TaskThree>
+      <section className="task-three">
+        <TaskThree onClickNext={onClickNext} />
       </section>
-    </>
+    </div>
   );
 };
 

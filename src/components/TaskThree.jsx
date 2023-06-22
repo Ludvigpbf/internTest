@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export const TaskThree = () => {
+// eslint-disable-next-line react/prop-types
+export const TaskThree = ({ onClickNext }) => {
   const [answers, setAnswers] = useState({
     options: [],
   });
@@ -75,7 +76,13 @@ export const TaskThree = () => {
             />
           </label>
         </div>
-        <button type="submit">Submit</button>
+        <button
+          onClick={() => {
+            onClickNext();
+          }}
+        >
+          Sumbit
+        </button>
       </form>
       <h2>2/4</h2>
     </div>

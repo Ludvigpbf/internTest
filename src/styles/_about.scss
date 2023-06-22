@@ -10,7 +10,10 @@
         width: 100%;
 
         .who-card {
-            padding-right: 30rem;
+            @include desktop {
+                padding-right: 30rem;
+            }
+
 
             .who-title {
                 color: $mango-yellow;
@@ -27,7 +30,9 @@
         }
 
         .what-card {
-            padding-left: 30rem;
+            @include desktop {
+                padding-left: 30rem;
+            }
 
             .what-title {
                 color: $mango-yellow;

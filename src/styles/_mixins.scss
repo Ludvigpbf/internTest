@@ -19,7 +19,7 @@ $f-xs: 0.75rem;
 $f-sm: 0.875rem;
 $f-md: 1rem;
 $f-lg: 2rem;
-$f-xl: 3rem;
+$f-xl: 3vw;
 $f-xxl: 4rem;
 $f-xxxl: 4.5rem;
 
@@ -142,3 +142,399 @@ $forest-green: hsl(120, 45%, 35%);
         width: 45.3%;
     }
 }
+
+// Question one animation
+
+@keyframes question-one-animation {
+
+    0% {
+        transform: translateY(0%) rotate(0deg);
+    }
+
+
+
+    100% {
+
+
+        transform: translateX(-100%) translateY(0%);
+    }
+}
+
+// Question two animation
+
+@keyframes question-two-animation {
+
+    0% {
+        transform: translateX(-100%) translateY(0%);
+    }
+
+
+
+    100% {
+
+
+        transform: translateX(-100%) translateY(-100%);
+    }
+}
+
+// Question three animation
+
+@keyframes question-three-animation {
+
+    0% {
+        transform: translateX(-100%) translateY(-100%);
+    }
+
+
+
+    100% {
+
+
+        transform: translateX(0%) translateY(-100%);
+    }
+}
+
+
+// Container Animations
+
+// Dev mode
+
+@keyframes right-animation {
+
+    0% {
+        transform: translateZ(-100vw) rotateY(0deg);
+    }
+
+
+    20% {
+        transform: translateZ(-150vw) rotateY(0deg);
+    }
+
+    30% {
+        transform: translateZ(-150vw) rotateY(5deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-150vw) rotateY(-95deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-150vw)rotateY(-90deg);
+    }
+
+    100% {
+        transform:
+            translateZ(-100vw) rotateY(-90deg);
+    }
+}
+
+
+@keyframes back-animation {
+
+    0% {
+        transform: translateZ(-100vw) rotateY(-90deg);
+    }
+
+
+    20% {
+        transform: translateZ(-150vw) rotateY(-90deg);
+    }
+
+    30% {
+        transform: translateZ(-150vw) rotateY(-85deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-150vw) rotateY(-185deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-150vw) rotateY(-180deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-100vw) rotateY(-180deg);
+    }
+}
+
+
+@keyframes bottom-animation {
+
+    0% {
+        transform: translateZ(-100vw) rotateY(-180deg);
+    }
+
+
+    20% {
+        transform: translateZ(-150vw) rotateY(-180deg);
+    }
+
+    30% {
+        transform: translateZ(-150vw) rotateY(-180deg) rotateX(5deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-150vw) rotateY(-180deg) rotateX(-100deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-150vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
+    }
+}
+
+@keyframes left-animation {
+
+    0% {
+        transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+
+    20% {
+        transform: translateZ(-150vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+    30% {
+        transform: translateZ(-150vw) rotateY(-180deg) rotateX(-100deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-150vw) rotateY(-270deg) rotateX(10deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-150vw) rotateY(-270deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: translateZ(-100vw) rotateY(-270deg) rotateX(0deg);
+    }
+}
+
+@keyframes top-animation {
+
+    0% {
+        transform: translateZ(-100vw) rotateY(-270deg) rotateX(0deg);
+    }
+
+
+    20% {
+        transform: translateZ(-150vw) rotateX(1deg) rotateY(90deg);
+    }
+
+    30% {
+        transform: translateZ(-150vw) rotateX(6deg) rotateY(90deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-150vw) rotateX(-95deg) rotateY(90deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-150vw) rotateX(-90deg) rotateY(90deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
+    }
+}
+
+// Production mode
+/* 
+@keyframes right-animation {
+
+    0% {
+        transform: translateZ(-50vw) rotateY(0deg);
+    }
+
+
+    20% {
+        transform: translateZ(-100vw) rotateY(0deg);
+    }
+
+    30% {
+        transform: translateZ(-100vw) rotateY(5deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-100vw) rotateY(-95deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-100vw)rotateY(-90deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-50vw) rotateY(-90deg);
+    }
+}
+
+
+@keyframes back-animation {
+
+    0% {
+        transform: translateZ(-50vw) rotateY(-90deg);
+    }
+
+
+    20% {
+        transform: translateZ(-100vw) rotateY(-90deg);
+    }
+
+    30% {
+        transform: translateZ(-100vw) rotateY(-85deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-100vw) rotateY(-185deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-100vw) rotateY(-180deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-50vw) rotateY(-180deg);
+    }
+}
+
+@keyframes bottom-animation {
+
+    0% {
+        transform: translateZ(-50vw) rotateY(-180deg);
+    }
+
+
+    20% {
+        transform: translateZ(-100vw) rotateY(-180deg);
+    }
+
+    30% {
+        transform: translateZ(-100vw) rotateY(-180deg) rotateX(5deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-100vw) rotateY(-180deg) rotateX(-100deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+    }
+}
+
+@keyframes left-animation {
+
+    0% {
+        transform: translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+
+    20% {
+        transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
+    }
+
+    30% {
+        transform: translateZ(-100vw) rotateY(-180deg) rotateX(-100deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-100vw) rotateY(-270deg) rotateX(10deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-100vw) rotateY(-270deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: translateZ(-50vw) rotateY(-270deg) rotateX(0deg);
+    }
+}
+
+@keyframes top-animation {
+
+    0% {
+        transform: translateZ(-50vw) rotateY(-270deg) rotateX(0deg);
+    }
+
+
+    20% {
+        transform: translateZ(-100vw) rotateX(1deg) rotateY(90deg);
+    }
+
+    30% {
+        transform: translateZ(-100vw) rotateX(6deg) rotateY(90deg);
+    }
+
+    65% {
+        transform:
+
+            translateZ(-100vw) rotateX(-95deg) rotateY(90deg);
+    }
+
+    80% {
+        transform:
+
+            translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
+    }
+
+    100% {
+        transform:
+
+            translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
+    }
+} */

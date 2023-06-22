@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export const TaskTwo = () => {
+// eslint-disable-next-line react/prop-types
+export const TaskTwo = ({ nextQuestion }) => {
   const [answers, setAnswers] = useState({
     options: [],
   });
@@ -22,6 +23,7 @@ export const TaskTwo = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Questionnaire answers:", answers);
+    nextQuestion();
   };
 
   return (

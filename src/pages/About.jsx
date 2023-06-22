@@ -1,10 +1,5 @@
-import PropTypes from "prop-types";
-
 // eslint-disable-next-line react/prop-types
-export const About = ({ onToggleTaskOne, showLine }) => {
-  const handleClick = () => {
-    onToggleTaskOne();
-  };
+export const About = ({ onClickNext, showLine }) => {
   return (
     <div className="about-content">
       <div className="who-card">
@@ -30,16 +25,17 @@ export const About = ({ onToggleTaskOne, showLine }) => {
       </div>
       <div className="button-container">
         {showLine && <span className="about-in-line"></span>}
-        <button className="start about-line-out" onClick={handleClick}>
+        <button
+          className="start about-line-out"
+          onClick={() => {
+            onClickNext();
+          }}
+        >
           Lets get started
         </button>
       </div>
     </div>
   );
-};
-
-About.propTypes = {
-  onToggleTaskOne: PropTypes.func.isRequired,
 };
 
 export default About;

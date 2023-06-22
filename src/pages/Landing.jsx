@@ -1,10 +1,5 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
-
 // eslint-disable-next-line react/prop-types
-export const Landing = ({ onClickNext }) => {
-  const [isClicked, setIsClicked] = useState(false);
-
+export const Landing = ({ onClickNext, isClicked }) => {
   return (
     <>
       <div className="hero">
@@ -39,7 +34,6 @@ export const Landing = ({ onClickNext }) => {
             className="find-out"
             onClick={() => {
               onClickNext();
-              setIsClicked(true);
             }}
           >
             Lets find out!
@@ -54,10 +48,6 @@ export const Landing = ({ onClickNext }) => {
       </div>
     </>
   );
-};
-
-Landing.propTypes = {
-  onToggleLanding: PropTypes.func.isRequired,
 };
 
 export default Landing;

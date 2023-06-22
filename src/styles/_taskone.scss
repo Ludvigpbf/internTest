@@ -1,8 +1,27 @@
 .task-one {
     display: flex;
-    background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+    /* background: linear-gradient(243.18deg, #202020 0%, #373737 100%); */
     align-items: center;
     justify-content: center;
+    height: 100%;
+
+    transform: translateX(100%) translateY(-100%);
+    /* animation: question-animation 1s forwards ease-in-out; */
+
+    @keyframes question-animation {
+
+        0% {
+            transform: translateX(100%) translateY(0%) rotate(90deg);
+        }
+
+
+
+        100% {
+
+
+            transform: translateX(0%) translateY(-100%) rotate(0deg);
+        }
+    }
 
     h1 {
         color: $mango-yellow;
@@ -16,7 +35,7 @@
         text-align: center;
     }
 
-    form {
+    .questionnaire-form {
         margin-top: 30px;
     }
 

@@ -1,0 +1,28 @@
+.form {
+    background: linear-gradient(243.18deg, #373737 0%, #202020 100%);
+
+    .form-container {
+        height: 100%;
+        width: 100%;
+        /* transform: translateX(0%) translateY(-100%); */
+        /* animation: turn-animation 1s forwards ease-in-out; */
+
+
+
+
+    }
+
+    .question-one {
+        animation: question-one-animation 1s forwards ease-in-out;
+
+    }
+
+    .question-two {
+        animation: question-two-animation 1s forwards ease-in-out;
+
+    }
+
+    .question-three {
+        animation: question-three-animation 1s forwards ease-in-out;
+    }
+}
