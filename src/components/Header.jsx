@@ -1,5 +1,5 @@
 import { useState } from "react";
-import spinner from ".../assets/spinner.png";
+import spinner from "../assets/spinner.png";
 
 export const Header = () => {
   const [animationClass, setAnimationClass] = useState("");
