@@ -1,3 +1,5 @@
+import silhouette from "../assets/silhoutte3.png";
+
 // eslint-disable-next-line react/prop-types
 export const Landing = ({ onClickNext, isClicked }) => {
   return (
@@ -44,7 +46,7 @@ export const Landing = ({ onClickNext, isClicked }) => {
         </div>
       </div>
       <div className="silhouette">
-        <img src="./src/assets/silhoutte3.png" alt="" />
+        <img src={silhouette} alt="" />
       </div>
     </>
   );
