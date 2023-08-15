@@ -1,4 +1,5 @@
 import { useState } from "react";
+import spinner from ".../assets/spinner.png";
 
 export const Header = () => {
   const [animationClass, setAnimationClass] = useState("");
@@ -14,7 +15,7 @@ export const Header = () => {
     <header>
       <div className="circle">
         <img
-          src="./src/assets/spinner.png"
+          src={spinner}
           alt="spinning name"
           className={`spinning-img ${animationClass}`}
           onMouseOver={handleHeaderImageMouseOver}
