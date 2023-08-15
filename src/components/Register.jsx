@@ -9,6 +9,8 @@ export const Register = ({ nextQuestion }) => {
     role: "",
   });
 
+  const [showPopup, setShowPopup] = useState(false);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setAnswers((prevAnswers) => ({
@@ -20,12 +22,32 @@ export const Register = ({ nextQuestion }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Questionnaire answers:", answers);
-    nextQuestion(); // Call the nextQuestion function from the prop
+    localStorage.setItem("User", JSON.stringify(answers));
+    nextQuestion();
   };
 
   return (
     <div className="container">
-      <h1>Who are you?</h1>
+      <div className="header-text">
+        <h1>Who are you?</h1>{" "}
+        <div className="info">
+          <p
+            className="info-button"
+            onMouseEnter={() => setShowPopup(true)}
+            onMouseLeave={() => setShowPopup(false)}
+          >
+            i
+          </p>
+          {showPopup && (
+            <div className="popup">
+              <p>
+                *Your information is only stored during this session. If the
+                window is closed or updated the information is deleted.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
       <form className="questionnaire-form" onSubmit={handleSubmit}>
         <div className="question">
           <p>Name</p>

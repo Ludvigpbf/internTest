@@ -4,16 +4,55 @@
     align-items: center;
     justify-content: center;
 
-    h1 {
-        color: $mango-yellow;
-        font-size: $f-xl;
+    .loading-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            color: $mango-yellow;
+            font-size: $f-xl;
+
+
+            .dots {
+                display: inline-block;
+                font-size: 1.5rem;
+                width: 1rem;
+
+
+                &:after {
+                    content: "";
+                    animation: loading-animation 1.5s infinite;
+                }
+
+                @keyframes loading-animation {
+                    0% {
+                        content: "";
+                    }
+
+                    25% {
+                        content: ".";
+                    }
+
+                    50% {
+                        content: "..";
+                    }
+
+                    75% {
+                        content: "...";
+                    }
+                }
+            }
+        }
+
+
+
+        button {
+            padding: 0.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+        }
     }
-
-    button {
-        padding: 0.5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-
-    }
-
 }

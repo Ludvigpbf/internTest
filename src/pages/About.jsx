@@ -10,7 +10,15 @@ export const About = ({ onClickNext, showLine }) => {
           buisness for 14 years and the last 6 years in leading positions. I
           started my journey to become a Fullstack Developer at Chas Acadamy in
           August 2022 and will graduate june 2024. In October 2023, my intership
-          starts and will last until mars 2024.
+          starts and will last until March 2024. For more information about me
+          please visit my{" "}
+          <a
+            href="https://www.linkedin.com/in/ludvigflyckt/"
+            className="linkedin"
+          >
+            Linkedin
+          </a>
+          .
         </p>
       </div>
       <div className="what-card">

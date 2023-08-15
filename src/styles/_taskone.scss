@@ -36,25 +36,55 @@
     }
 
     .questionnaire-form {
-        margin-top: 30px;
+
+        .question {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            .checkboxes {
+                width: 25vw;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .custom-checkbox {
+                    color: $mango-yellow;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 5rem;
+                    margin: 2rem;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        padding: 8px;
+                        border: 1px solid $light-gray;
+                        border-radius: 50%;
+                        margin: 0.5rem;
+
+
+                    }
+
+                    input[type="checkbox"]:checked {
+                        background-color: $mango-yellow;
+                        border-color: $mango-yellow;
+                    }
+
+                    span {
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
     }
 
-    .question {
-        margin-bottom: 20px;
-
-        p {
-            font-weight: bold;
-            color: $mango-yellow;
-        }
-
-        input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            max-width: 300px;
-        }
+    .alert-text {
+        color: red;
+        margin-bottom: 1rem;
     }
+
 
     button {
         padding: 10px 20px;
@@ -73,6 +103,6 @@
     h2 {
         color: $mango-yellow;
         margin: 2rem;
-        opacity: 0.4;
+        opacity: 0.8;
     }
 }

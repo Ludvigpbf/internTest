@@ -12,10 +12,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState("landing");
   const [showLine, setShowLine] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
 
   const handleClickNext = () => {
     setShowLine(true);
     setIsClicked(true);
+    setShowHeader(true);
 
     if (currentPage === "landing") {
       setCurrentPage("about");
@@ -47,6 +49,10 @@ function App() {
 
   const containerAnimationClass = getPageAnimationClass(currentPage);
 
+  window.addEventListener("beforeunload", () => {
+    localStorage.clear();
+  });
+
   return (
     <>
       <div className="wrapper">
@@ -68,7 +74,10 @@ function App() {
           </section>
           <section className="app-face result-greeting">
             <Header />
-            <ResultGreeting onClickNext={handleClickNext} />
+            <ResultGreeting
+              onClickNext={handleClickNext}
+              showHeader={showHeader}
+            />
           </section>
           <section className="app-face finish">
             <Finish onClickNext={handleClickNext} />

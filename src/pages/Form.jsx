@@ -20,7 +20,6 @@ export const Form = ({ onClickNext }) => {
     } else if (formClass === "question-two") {
       handleFormClass("question-three");
     }
-    // Add more conditions for subsequent clicks if needed
   };
 
   return (

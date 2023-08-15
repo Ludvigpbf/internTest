@@ -6,6 +6,8 @@ export const TaskOne = ({ nextQuestion }) => {
     options: [],
   });
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleOptionChange = (option) => {
     if (answers.options.includes(option)) {
       setAnswers((prevAnswers) => ({
@@ -22,62 +24,65 @@ export const TaskOne = ({ nextQuestion }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (answers.options.length === 0) {
+      setFormSubmitted(true);
+      return;
+    }
     console.log("Questionnaire answers:", answers);
+    localStorage.setItem("QuestionOne", JSON.stringify(answers));
     nextQuestion();
   };
   return (
     <>
       {" "}
       <div className="container">
-        <h1>We are..</h1>
+        <h1>An intership should be..</h1>
         <form className="questionnaire-form" onSubmit={handleSubmit}>
           <div className="question">
-            <p>Select options:</p>
-            <label>
-              <input
-                type="checkbox"
-                name="option1"
-                checked={answers.options.includes("option1")}
-                onChange={() => handleOptionChange("option1")}
-              />
-              Option 1
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="option2"
-                checked={answers.options.includes("option2")}
-                onChange={() => handleOptionChange("option2")}
-              />
-              Option 2
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="option3"
-                checked={answers.options.includes("option3")}
-                onChange={() => handleOptionChange("option3")}
-              />
-              Option 3
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="option3"
-                checked={answers.options.includes("option3")}
-                onChange={() => handleOptionChange("option3")}
-              />
-              Option 4
-            </label>
-            <label>
-              <input
-                type="text"
-                name="option4"
-                checked={answers.options.includes("option3")}
-                onChange={() => handleOptionChange("option3")}
-              />
-            </label>
+            <div className="checkboxes">
+              <label className="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name="option1"
+                  checked={answers.options.includes("option1")}
+                  onChange={() => handleOptionChange("option1")}
+                />
+                <span>Creative</span>
+              </label>
+              <label className="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name="option2"
+                  checked={answers.options.includes("option2")}
+                  onChange={() => handleOptionChange("option2")}
+                />
+                <span>Static</span>
+              </label>
+              <label className="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name="option3"
+                  checked={answers.options.includes("option3")}
+                  onChange={() => handleOptionChange("option3")}
+                />
+                <span>Organized</span>
+              </label>
+              <label className="custom-checkbox">
+                <input
+                  type="checkbox"
+                  name="fun"
+                  checked={answers.options.includes("fun")}
+                  onChange={() => handleOptionChange("fun")}
+                />
+                <span>Fun</span>
+              </label>
+            </div>
           </div>
+          {formSubmitted && (
+            <p className="alert-text">
+              Please select at least one option before proceeding.
+            </p>
+          )}
           <button type="submit">Next</button>
         </form>
         <h2>2/4</h2>

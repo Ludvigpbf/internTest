@@ -3,10 +3,106 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 10vw;
 
-    h1 {
-        color: $mango-yellow;
-        font-size: $f-xl;
+    .greeting-wrapper {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
     }
 
+    .show-content {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: $light-gray;
+            font-size: $f-xl;
+            font-weight: $light;
+            margin: -0.1rem;
+
+            .username {
+                font-size: $f-xl;
+                color: $mango-yellow;
+                font-weight: $medium;
+            }
+        }
+
+        .paragraph-1 {
+            color: $light-gray;
+            width: 25vw;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0rem;
+
+            .role {
+                font-size: $f-md;
+                color: $mango-yellow;
+                font-weight: $medium;
+            }
+
+            .company {
+                font-size: $f-md;
+                color: $mango-yellow;
+                font-weight: $medium;
+            }
+        }
+
+        .paragraph-2 {
+            color: $light-gray;
+            width: 25vw;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0rem;
+        }
+
+        .result-link {
+            color: $light-gray;
+            opacity: 0;
+            animation: slide-in-animation 0.5s ease-in-out forwards;
+            padding: 0rem;
+
+            button {
+                background-color: transparent;
+                color: $mango-yellow;
+                font-style: italic;
+                border: none;
+                padding: 0;
+
+                &:hover {
+                    color: $muted-yellow;
+                }
+            }
+        }
+    }
+}
+
+
+.slide-in-one {
+    animation-delay: 0s;
+}
+
+.slide-in-two {
+    animation-delay: 0.8s;
+}
+
+.slide-in-three {
+    animation-delay: 2s;
+}
+
+.slide-in-four {
+    animation-delay: 6s;
+}
+
+@keyframes slide-in-animation {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

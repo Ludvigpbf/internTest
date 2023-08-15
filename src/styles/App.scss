@@ -49,6 +49,20 @@ button {
     }
 }
 
+a {
+    cursor: url('src/assets/cursor5.png'), pointer;
+    transition: cursor 1s;
+
+    &:hover {
+        cursor: url('src/assets/hover.png'), pointer;
+
+    }
+
+    &:active {
+        cursor: url('src/assets/active.png'), pointer;
+    }
+}
+
 
 
 .slide-up {
@@ -90,7 +104,7 @@ button {
             transform-style: preserve-3d;
             position: relative;
             transform: translateZ(-50vw) rotateY(0deg);
-            ;
+            /* transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg); */
 
 
         }
@@ -108,6 +122,7 @@ button {
 
         .right-animation {
             animation: right-animation 2.5s forwards ease-in-out;
+            animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
         }
 
         .about {

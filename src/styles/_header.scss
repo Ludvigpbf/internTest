@@ -18,7 +18,7 @@ header {
 
         &:hover {
             .spinning-img {
-                animation: spin-hover 1s linear infinite;
+                animation-play-state: paused;
                 cursor: url('src/assets/cursorHover.png'), pointer;
             }
         }

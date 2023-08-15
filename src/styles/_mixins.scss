@@ -35,6 +35,7 @@ $light-gray: rgb(204, 204, 204);
 $warm-yellow: rgb(255, 204, 0);
 $muted-yellow: rgb(255, 204, 153);
 $mango-yellow: rgb(255, 153, 51);
+$mango-yellow-hover: rgb(220, 125, 31);
 $green-blue: rgb(0, 120, 140);
 $purple-red: rgb(140, 0, 120);
 $red: rgb(204, 0, 51);
@@ -54,13 +55,13 @@ $forest-green: hsl(120, 45%, 35%);
     }
 }
 
-@keyframes spin-hover {
+@keyframes stop-spin {
     0% {
         transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(900deg);
+        transform: rotate(0deg);
 
     }
 }
@@ -122,26 +123,6 @@ $forest-green: hsl(120, 45%, 35%);
     }
 }
 
-@keyframes landingLine {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 210%;
-    }
-}
-
-@keyframes aboutInLine {
-    0% {
-        width: 0%;
-        visibility: visible;
-    }
-
-    100% {
-        width: 45.3%;
-    }
-}
 
 // Question one animation
 
@@ -198,7 +179,7 @@ $forest-green: hsl(120, 45%, 35%);
 // Container Animations
 
 // Dev mode
-
+/* 
 @keyframes right-animation {
 
     0% {
@@ -366,10 +347,11 @@ $forest-green: hsl(120, 45%, 35%);
 
             translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
     }
-}
+} */
+
 
 // Production mode
-/* 
+
 @keyframes right-animation {
 
     0% {
@@ -537,4 +519,4 @@ $forest-green: hsl(120, 45%, 35%);
 
             translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
     }
-} */
+}
