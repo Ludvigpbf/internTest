@@ -5,7 +5,7 @@ import TaskTwo from "../components/TaskTwo.jsx";
 import TaskThree from "../components/TaskThree.jsx";
 
 // eslint-disable-next-line react/prop-types
-export const Form = ({ onClickNext }) => {
+export const Form = ({ onClickNext, setCheckAnswers }) => {
   const [formClass, setFormClass] = useState("");
 
   const handleFormClass = (className) => {
@@ -34,7 +34,10 @@ export const Form = ({ onClickNext }) => {
         <TaskTwo nextQuestion={(className) => handleNextButton(className)} />
       </section>
       <section className="task-three">
-        <TaskThree onClickNext={onClickNext} />
+        <TaskThree
+          onClickNext={onClickNext}
+          setCheckAnswers={setCheckAnswers}
+        />
       </section>
     </div>
   );

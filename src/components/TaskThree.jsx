@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export const TaskThree = ({ onClickNext }) => {
+export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
   const [answers, setAnswers] = useState({
     options: [],
   });
@@ -30,6 +30,7 @@ export const TaskThree = ({ onClickNext }) => {
     }
     console.log("Questionnaire answers:", answers);
     localStorage.setItem("QuestionThree", JSON.stringify(answers));
+    setCheckAnswers(true);
   };
 
   return (

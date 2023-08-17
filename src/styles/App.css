@@ -353,35 +353,46 @@
 }
 .landing {
   display: flex;
-  flex-direction: row;
+  background: linear-gradient(296.76deg, #202020 0.61%, #373737 100%);
   align-items: center;
   justify-content: center;
-  background: linear-gradient(296.76deg, #202020 0.61%, #373737 100%);
   overflow: hidden;
+}
+@media screen and (min-width: 800px) {
+  .landing {
+    flex-direction: row;
+  }
 }
 .landing .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 60%;
   height: 100%;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero {
+    justify-content: center;
+  }
 }
 .landing .hero .hello {
   box-sizing: content-box;
   display: flex;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   justify-content: center;
   align-items: center;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .hello {
+    flex-grow: 1;
+    margin-top: 0rem;
     margin-bottom: 5rem;
   }
 }
 .landing .hero .hello h1 {
   font-size: 1rem;
+  margin-right: 0.3rem;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .hello h1 {
@@ -393,7 +404,7 @@
 }
 .landing .hero .hello .words {
   overflow: hidden;
-  height: 2.8vh;
+  height: 2.3vh;
   background-color: rgb(255, 153, 51);
   border-radius: 0.5rem;
 }
@@ -417,15 +428,19 @@
   }
 }
 .landing .hero .introduction {
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgb(64, 64, 64);
+  margin-top: 13.5rem;
+  margin-left: 7rem;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction {
     flex-grow: 1;
     width: 40%;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
   }
 }
 .landing .hero .introduction .me {
@@ -450,8 +465,8 @@
   }
 }
 .landing .hero .introduction .introduction-text {
-  font-size: 0.5rem;
-  width: 10rem;
+  font-size: 0.75rem;
+  width: 100%;
   margin: 0rem;
   color: rgb(204, 204, 204);
   font-weight: 200;
@@ -464,7 +479,7 @@
 }
 .landing .hero .introduction .introduction-text .work-title {
   color: rgb(255, 153, 51);
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 500;
 }
@@ -477,9 +492,15 @@
   display: flex;
   align-items: center;
   width: 50%;
-  margin-bottom: 1rem;
-  margin-left: 6rem;
+  margin-top: 5rem;
   position: relative;
+  width: 17rem;
+}
+@media screen and (min-width: 800px) {
+  .landing .hero .continue {
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+  }
 }
 .landing .hero .continue .match {
   color: rgb(204, 204, 204);
@@ -504,16 +525,26 @@
   box-shadow: 0px 0px 5px rgb(255, 204, 153), 0px 0px 0px rgb(255, 204, 0), 0px 0px 0px rgb(255, 204, 0);
 }
 .landing .silhouette {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  left: 0.2rem;
+  z-index: -1;
+}
+@media screen and (min-width: 800px) {
+  .landing .silhouette {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .landing .silhouette img {
-  width: 50%;
+  width: 95%;
   height: auto;
+  opacity: 0.7;
 }
 @media screen and (min-width: 800px) {
   .landing .silhouette img {
     width: 100%;
+    opacity: 1;
   }
 }
 
@@ -588,12 +619,10 @@
 
 .task-one {
   display: flex;
-  /* background: linear-gradient(243.18deg, #202020 0%, #373737 100%); */
   align-items: center;
   justify-content: center;
   height: 100%;
   transform: translateX(100%) translateY(-100%);
-  /* animation: question-animation 1s forwards ease-in-out; */
 }
 @keyframes question-animation {
   0% {
@@ -879,8 +908,7 @@
   width: 10vw;
 }
 .result-greeting .greeting-wrapper {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 .result-greeting .show-content {
   opacity: 1;
@@ -939,32 +967,6 @@
   color: rgb(255, 204, 153);
 }
 
-.slide-in-one {
-  animation-delay: 0s;
-}
-
-.slide-in-two {
-  animation-delay: 0.8s;
-}
-
-.slide-in-three {
-  animation-delay: 2s;
-}
-
-.slide-in-four {
-  animation-delay: 6s;
-}
-
-@keyframes slide-in-animation {
-  0% {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 .finish {
   background: linear-gradient(243.18deg, #202020 0%, #373737 100%);
   display: flex;
@@ -979,17 +981,6 @@
 .finish .answers {
   display: flex;
   flex-direction: row;
-  /*   .question-one {
-      margin: 0;
-  }
-
-  .question-two {
-      margin: 0;
-  }
-
-  .question-three {
-      margin: 0;
-  } */
 }
 .finish .answers .answers-block {
   display: flex;

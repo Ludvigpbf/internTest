@@ -1,12 +1,9 @@
 .task-one {
     display: flex;
-    /* background: linear-gradient(243.18deg, #202020 0%, #373737 100%); */
     align-items: center;
     justify-content: center;
     height: 100%;
-
     transform: translateX(100%) translateY(-100%);
-    /* animation: question-animation 1s forwards ease-in-out; */
 
     @keyframes question-animation {
 
