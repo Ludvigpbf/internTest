@@ -17,7 +17,11 @@
 
             h1 {
                 color: $mango-yellow;
-                font-size: $f-xl;
+                font-size: $f-lg;
+
+                @include desktop {
+                    font-size: $f-xl;
+                }
             }
 
             .info {
