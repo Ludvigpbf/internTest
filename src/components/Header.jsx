@@ -1,5 +1,6 @@
 import { useState } from "react";
 import spinner from "../assets/spinner.png";
+import squares from "../assets/squares.png";
 
 export const Header = () => {
   const [animationClass, setAnimationClass] = useState("");
@@ -23,7 +24,7 @@ export const Header = () => {
         />
       </div>
       <div className="squares">
-        <img src="./src/assets/squares.png" alt="" />
+        <img src={squares} alt="" />
       </div>
     </header>
   );
