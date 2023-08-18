@@ -24,7 +24,7 @@ export const Landing = ({ onClickNext, isClicked }) => {
             I&apos;m currently studying to become a<br />
             <span className="work-title">Full stack developer</span> and I am
             looking for the best company to do my internship at and/or get a
-            part time job. For me, it&apos;s important to be challenged ,
+            part time job. For me, it&apos;s important to be challenged,
             creative and have a good balance between playfullness and
             professionalism.
             <br /> <br />
