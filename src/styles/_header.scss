@@ -13,7 +13,11 @@ header {
     .circle {
         .spinning-img {
             animation: spin 20s linear infinite;
-            width: 5em;
+            width: 3em;
+
+            @include desktop {
+                width: 5em;
+            }
         }
 
         &:hover {
@@ -24,46 +28,19 @@ header {
         }
     }
 
-    nav {
+    .squares {
         display: flex;
         flex-direction: row;
         margin-right: 1rem;
 
-        .hamburger-menu {
-            display: flex;
-            flex-direction: row-reverse;
-            background: none;
-            border: none;
-            flex-wrap: wrap;
-            width: 3rem;
+        img {
+            width: 2rem;
 
-
-            .square {
-                border: 1px solid $mango-yellow;
-                border-radius: 6px 0px 6px 0px;
-                width: 15px;
-                height: 15px;
-
-            }
-
-
-
-            .top-left {
-                background: transparent;
-
-            }
-
-
-            .top-right {
-                background: transparent;
-            }
-
-
-            .bottom-right {
-                background: transparent;
-
+            @include desktop {
+                width: 3rem;
             }
         }
+
 
     }
 
