@@ -447,7 +447,7 @@
   color: rgb(204, 204, 204);
   font-size: 1rem;
   margin-bottom: 1rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction .me {
@@ -469,7 +469,7 @@
   width: 100%;
   margin: 0rem;
   color: rgb(204, 204, 204);
-  font-weight: 200;
+  font-weight: 300;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction .introduction-text {
@@ -492,7 +492,7 @@
   display: flex;
   align-items: center;
   width: 50%;
-  margin-top: 5rem;
+  margin-top: 2rem;
   position: relative;
   width: 17rem;
 }
@@ -500,6 +500,7 @@
   .landing .hero .continue {
     margin-left: 6rem;
     margin-bottom: 1rem;
+    margin-top: 5rem;
   }
 }
 .landing .hero .continue .match {

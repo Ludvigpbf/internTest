@@ -100,7 +100,7 @@
                 color: $light-gray;
                 font-size: $f-md;
                 margin-bottom: 1rem;
-                font-weight: $extra-light;
+                font-weight: $light;
 
 
                 @include desktop {
@@ -125,7 +125,7 @@
                 width: 100%;
                 margin: 0rem;
                 color: $light-gray;
-                font-weight: $extra-light;
+                font-weight: $light;
 
                 @include desktop {
                     font-size: $f-md;
@@ -155,13 +155,14 @@
             display: flex;
             align-items: center;
             width: 50%;
-            margin-top: 5rem;
+            margin-top: 2rem;
             position: relative;
             width: 17rem;
 
             @include desktop {
                 margin-left: 6rem;
                 margin-bottom: 1rem;
+                margin-top: 5rem;
             }
 
             .match {
