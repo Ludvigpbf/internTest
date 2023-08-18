@@ -434,7 +434,7 @@
   width: 100%;
   text-shadow: 2px 2px 5px rgb(64, 64, 64);
   margin-top: 16rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction {
@@ -672,7 +672,12 @@
 }
 .task-one h1 {
   color: rgb(255, 153, 51);
-  font-size: 3vw;
+  font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .task-one h1 {
+    font-size: 3vw;
+  }
 }
 .task-one .container {
   width: 20rem;
@@ -691,11 +696,16 @@
   margin-bottom: 20px;
 }
 .task-one .questionnaire-form .question .checkboxes {
-  width: 25vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 800px) {
+  .task-one .questionnaire-form .question .checkboxes {
+    width: 25vw;
+  }
 }
 .task-one .questionnaire-form .question .checkboxes .custom-checkbox {
   color: rgb(255, 153, 51);
@@ -703,7 +713,12 @@
   flex-direction: column;
   align-items: center;
   width: 5rem;
-  margin: 2rem;
+  margin: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .task-one .questionnaire-form .question .checkboxes .custom-checkbox {
+    margin: 2rem;
+  }
 }
 .task-one .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
   -webkit-appearance: none;
@@ -753,13 +768,23 @@
 }
 .task-two h1 {
   color: rgb(255, 153, 51);
-  font-size: 3vw;
+  font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .task-two h1 {
+    font-size: 3vw;
+  }
 }
 .task-two .container {
-  max-width: 600px;
+  width: 20rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .task-two .container {
+    max-width: 600px;
+  }
 }
 .task-two .questionnaire-form .question {
   display: flex;
@@ -767,11 +792,16 @@
   margin-bottom: 20px;
 }
 .task-two .questionnaire-form .question .checkboxes {
-  width: 25vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 800px) {
+  .task-two .questionnaire-form .question .checkboxes {
+    width: 25vw;
+  }
 }
 .task-two .questionnaire-form .question .checkboxes .custom-checkbox {
   color: rgb(255, 153, 51);
@@ -779,7 +809,12 @@
   flex-direction: column;
   align-items: center;
   width: 5rem;
-  margin: 2rem;
+  margin: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .task-two .questionnaire-form .question .checkboxes .custom-checkbox {
+    margin: 2rem;
+  }
 }
 .task-two .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
   -webkit-appearance: none;
@@ -829,16 +864,23 @@
 }
 .task-three h1 {
   color: rgb(255, 153, 51);
-  font-size: 3vw;
+  font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .task-three h1 {
+    font-size: 3vw;
+  }
 }
 .task-three .container {
-  max-width: 600px;
+  width: 20rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
-.task-three .questionnaire-form {
-  margin-top: 30px;
+@media screen and (min-width: 800px) {
+  .task-three .container {
+    max-width: 600px;
+  }
 }
 .task-three .questionnaire-form .question {
   display: flex;
@@ -846,11 +888,16 @@
   margin-bottom: 20px;
 }
 .task-three .questionnaire-form .question .checkboxes {
-  width: 25vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 800px) {
+  .task-three .questionnaire-form .question .checkboxes {
+    width: 25vw;
+  }
 }
 .task-three .questionnaire-form .question .checkboxes .custom-checkbox {
   color: rgb(255, 153, 51);
@@ -858,7 +905,12 @@
   flex-direction: column;
   align-items: center;
   width: 5rem;
-  margin: 2rem;
+  margin: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .task-three .questionnaire-form .question .checkboxes .custom-checkbox {
+    margin: 2rem;
+  }
 }
 .task-three .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
   -webkit-appearance: none;

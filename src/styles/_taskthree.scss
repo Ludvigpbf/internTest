@@ -8,19 +8,25 @@
 
     h1 {
         color: $mango-yellow;
-        font-size: $f-xl;
+        font-size: $f-lg;
+
+        @include desktop {
+            font-size: $f-xl;
+        }
     }
 
     .container {
-        max-width: 600px;
+        width: 20rem;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
+
+        @include desktop {
+            max-width: 600px;
+        }
     }
 
     .questionnaire-form {
-        margin-top: 30px;
-
 
         .question {
             display: flex;
@@ -28,11 +34,16 @@
             margin-bottom: 20px;
 
             .checkboxes {
-                width: 25vw;
+                width: 70vw;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-evenly;
+
+                @include desktop {
+                    width: 25vw;
+                }
+
 
                 .custom-checkbox {
                     color: $mango-yellow;
@@ -40,7 +51,11 @@
                     flex-direction: column;
                     align-items: center;
                     width: 5rem;
-                    margin: 2rem;
+                    margin: 1rem;
+
+                    @include desktop {
+                        margin: 2rem;
+                    }
 
                     input[type="checkbox"] {
                         appearance: none;
@@ -59,6 +74,7 @@
 
                     span {
                         margin-top: 0.5rem;
+
                     }
                 }
             }
@@ -69,6 +85,7 @@
         color: red;
         margin-bottom: 1rem;
     }
+
 
     button {
         padding: 10px 20px;
