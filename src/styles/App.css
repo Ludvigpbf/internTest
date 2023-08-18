@@ -378,8 +378,8 @@
 .landing .hero .hello {
   box-sizing: content-box;
   display: flex;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   justify-content: center;
   align-items: center;
 }
@@ -433,7 +433,7 @@
   width: 100%;
   text-shadow: 2px 2px 5px rgb(64, 64, 64);
   margin-top: 13.5rem;
-  margin-left: 7rem;
+  margin-left: 5rem;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction {
