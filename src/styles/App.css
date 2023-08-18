@@ -378,8 +378,8 @@
 .landing .hero .hello {
   box-sizing: content-box;
   display: flex;
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   justify-content: center;
   align-items: center;
 }
