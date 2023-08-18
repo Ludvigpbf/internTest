@@ -26,10 +26,14 @@
     }
 
     .container {
-        max-width: 600px;
+        width: 20rem;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
+
+        @include desktop {
+            max-width: 600px;
+        }
     }
 
     .questionnaire-form {

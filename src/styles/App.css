@@ -433,7 +433,7 @@
   align-items: center;
   width: 100%;
   text-shadow: 2px 2px 5px rgb(64, 64, 64);
-  margin-top: 17rem;
+  margin-top: 16rem;
   margin-left: 5rem;
 }
 @media screen and (min-width: 800px) {
@@ -675,10 +675,15 @@
   font-size: 3vw;
 }
 .task-one .container {
-  max-width: 600px;
+  width: 20rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .task-one .container {
+    max-width: 600px;
+  }
 }
 .task-one .questionnaire-form .question {
   display: flex;
