@@ -5,6 +5,9 @@ export const Finish = () => {
   const [role, setRole] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
+  const [answersOne, setAnswersOne] = useState("");
+  const [answersTwo, setAnswersTwo] = useState("");
+  const [answersThree, setAnswersThree] = useState("");
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("User"));
     const name = user?.name || "";
@@ -16,6 +19,17 @@ export const Finish = () => {
     setRole(role);
     setCompany(company);
     setEmail(email);
+
+    const questionOneData = JSON.parse(localStorage.getItem("QuestionOne"));
+    const answersOneData = questionOneData?.options || "your answer";
+    const questionTwo = JSON.parse(localStorage.getItem("QuestionTwo"));
+    const answersTwoData = questionTwo?.options || "";
+    const questionThree = JSON.parse(localStorage.getItem("QuestionThree"));
+    const answersThreeData = questionThree?.options || "";
+
+    setAnswersOne(answersOneData);
+    setAnswersTwo(answersTwoData);
+    setAnswersThree(answersThreeData);
   }, []);
   return (
     <>
@@ -29,8 +43,8 @@ export const Finish = () => {
             <p className="answer">Eager to learn</p>
           </div>
           <div className="user-box">
-            <p className="user">{username}</p>
-            <p className="answer">Eager to learn</p>
+            <p className="user">{company}</p>
+            <p className="answer">{answersOne}</p>
           </div>
         </div>
         <div className="answers-block question-two">
@@ -40,8 +54,8 @@ export const Finish = () => {
             <p className="answer">Creative</p>
           </div>
           <div className="user-box">
-            <p className="user">{username}</p>
-            <p className="answer">Creative</p>
+            <p className="user">{company}</p>
+            <p className="answer">{answersTwo}</p>
           </div>
         </div>
         <div className="answers-block question-three">
@@ -51,8 +65,8 @@ export const Finish = () => {
             <p className="answer">Fun</p>
           </div>
           <div className="user-box">
-            <p className="user">{username}</p>
-            <p className="answer">Fun</p>
+            <p className="user">{company}</p>
+            <p className="answer">{answersThree}</p>
           </div>
         </div>
       </div>
