@@ -1102,8 +1102,13 @@
 .finish .answers .answers-block {
   display: flex;
   flex-direction: column;
-  margin: 3rem;
+  margin: 0rem;
   color: rgb(204, 204, 204);
+}
+@media screen and (min-width: 800px) {
+  .finish .answers .answers-block {
+    margin: 3rem;
+  }
 }
 .finish .answers .answers-block .question-check {
   color: rgb(31, 216, 18);
@@ -1146,6 +1151,12 @@
 }
 .finish .finish-message h2 {
   color: rgb(255, 153, 51);
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .finish-message h2 {
+    font-size: 4rem;
+  }
 }
 .finish .finish-message p {
   color: rgb(204, 204, 204);
@@ -1374,10 +1385,8 @@ a:active {
   height: 100%;
   transform-style: preserve-3d;
   position: relative;
-  transform: translateZ(-50vw) rotateY(0deg);
-  /* transform:
-
-      translateZ(-50vw) rotateX(-90deg) rotateY(90deg); */
+  /* transform: translateZ(-50vw) rotateY(0deg); */
+  transform: translateZ(-45vw) rotateX(-90deg) rotateY(90deg);
 }
 #root .wrapper .app-face {
   position: absolute;

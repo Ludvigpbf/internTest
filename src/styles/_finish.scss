@@ -23,8 +23,12 @@
         .answers-block {
             display: flex;
             flex-direction: column;
-            margin: 3rem;
+            margin: 0rem;
             color: $light-gray;
+
+            @include desktop {
+                margin: 3rem;
+            }
 
             .question-check {
                 color: rgb(31, 216, 18);
@@ -71,8 +75,14 @@
     .finish-message {
         color: $light-gray;
 
+
         h2 {
             color: $mango-yellow;
+            font-size: $f-xs;
+
+            @include desktop {
+                font-size: $f-xxl;
+            }
         }
 
         p {
