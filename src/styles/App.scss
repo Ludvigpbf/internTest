@@ -104,7 +104,9 @@ a {
             transform-style: preserve-3d;
             position: relative;
             transform: translateZ(-50vw) rotateY(0deg);
-            /* transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg); */
+            /* transform:
+
+                translateZ(-50vw) rotateX(-90deg) rotateY(90deg); */
 
 
         }
@@ -145,6 +147,8 @@ a {
         .loading {
             height: 100vw;
             transform: rotateX(90deg) rotateY(180deg) translateZ(50vh);
+
+
         }
 
         .left-animation {

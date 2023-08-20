@@ -25,29 +25,29 @@ export const Finish = () => {
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p>This is users answer one</p>
+            <p className="answer">This is users answer one</p>
           </div>
         </div>
         <div className="answers-block question-two">
           <h2 className="question-check">Question two</h2>
           <div className="user-box">
             <p className="user">Ludvig</p>
-            <p>This is ludvigs answer two</p>
+            <p className="answer">This is ludvigs answer two</p>
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p>This is users answer two</p>
+            <p className="answer">This is users answer two</p>
           </div>
         </div>
         <div className="answers-block question-three">
           <h2 className="question-check">Question Three</h2>
           <div className="user-box">
             <p className="user">Ludvig</p>
-            <p>This is your answer three</p>
+            <p className="answer">This is your answer three</p>
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p>This is my answer three</p>
+            <p className="answer">This is my answer three</p>
           </div>
         </div>
       </div>

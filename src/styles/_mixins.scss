@@ -423,6 +423,7 @@ $forest-green: hsl(120, 45%, 35%);
     }
 }
 
+
 @keyframes bottom-animation {
 
     0% {
@@ -450,10 +451,19 @@ $forest-green: hsl(120, 45%, 35%);
             translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
     }
 
+
     100% {
         transform:
 
-            translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+            translateZ(-50vw) rotateY(-180deg) rotateX(-90deg);
+
+        @include desktop {
+            transform:
+
+                translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+
+
+        }
     }
 }
 
@@ -519,6 +529,12 @@ $forest-green: hsl(120, 45%, 35%);
     100% {
         transform:
 
-            translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
+            translateZ(-50vw) rotateX(-90deg) rotateY(90deg);
+
+        @include desktop {
+            transform:
+
+                translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
+        }
     }
 }

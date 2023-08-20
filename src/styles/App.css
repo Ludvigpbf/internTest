@@ -308,7 +308,10 @@
     transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
   }
   100% {
-    transform: translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+    transform: translateZ(-50vw) rotateY(-180deg) rotateX(-90deg);
+    @media screen and (min-width: 800px) {
+      transform: translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
+    }
   }
 }
 @keyframes left-animation {
@@ -348,7 +351,10 @@
     transform: translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
   }
   100% {
-    transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
+    transform: translateZ(-50vw) rotateX(-90deg) rotateY(90deg);
+    @media screen and (min-width: 800px) {
+      transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
+    }
   }
 }
 .landing {
@@ -434,7 +440,7 @@
   width: 100%;
   text-shadow: 2px 2px 5px rgb(64, 64, 64);
   margin-top: 16rem;
-  margin-left: 6rem;
+  margin-left: 7rem;
 }
 @media screen and (min-width: 800px) {
   .landing .hero .introduction {
@@ -1002,63 +1008,73 @@
   justify-content: center;
   width: 10vw;
 }
-.result-greeting .greeting-wrapper {
+.result-greeting .greeting-content .greeting-wrapper {
   opacity: 1;
 }
-.result-greeting .show-content {
+.result-greeting .greeting-content .show-content {
   opacity: 1;
   display: flex;
   flex-direction: column;
 }
-.result-greeting .show-content h1 {
+.result-greeting .greeting-content .show-content h1 {
   color: rgb(204, 204, 204);
   font-size: 3vw;
   font-weight: 300;
   margin: -0.1rem;
 }
-.result-greeting .show-content h1 .username {
+.result-greeting .greeting-content .show-content h1 .username {
   font-size: 3vw;
   color: rgb(255, 153, 51);
   font-weight: 500;
 }
-.result-greeting .show-content .paragraph-1 {
+.result-greeting .greeting-content .show-content .paragraph-1 {
   color: rgb(204, 204, 204);
-  width: 25vw;
+  width: 80vw;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0rem;
 }
-.result-greeting .show-content .paragraph-1 .role {
+@media screen and (min-width: 800px) {
+  .result-greeting .greeting-content .show-content .paragraph-1 {
+    width: 25vw;
+  }
+}
+.result-greeting .greeting-content .show-content .paragraph-1 .role {
   font-size: 1rem;
   color: rgb(255, 153, 51);
   font-weight: 500;
 }
-.result-greeting .show-content .paragraph-1 .company {
+.result-greeting .greeting-content .show-content .paragraph-1 .company {
   font-size: 1rem;
   color: rgb(255, 153, 51);
   font-weight: 500;
 }
-.result-greeting .show-content .paragraph-2 {
+.result-greeting .greeting-content .show-content .paragraph-2 {
   color: rgb(204, 204, 204);
-  width: 25vw;
+  width: 80vw;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 0rem;
 }
-.result-greeting .show-content .result-link {
+@media screen and (min-width: 800px) {
+  .result-greeting .greeting-content .show-content .paragraph-2 {
+    width: 25vw;
+  }
+}
+.result-greeting .greeting-content .show-content .result-link {
   color: rgb(204, 204, 204);
-  opacity: 0;
+  opacity: 1;
   animation: slide-in-animation 0.5s ease-in-out forwards;
   padding: 0rem;
 }
-.result-greeting .show-content .result-link button {
+.result-greeting .greeting-content .show-content .result-link button {
   background-color: transparent;
   color: rgb(255, 153, 51);
   font-style: italic;
   border: none;
   padding: 0;
 }
-.result-greeting .show-content .result-link button:hover {
+.result-greeting .greeting-content .show-content .result-link button:hover {
   color: rgb(255, 204, 153);
 }
 
@@ -1068,6 +1084,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
 }
 .finish .result {
   color: rgb(255, 153, 51);
@@ -1075,7 +1092,12 @@
 }
 .finish .answers {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  .finish .answers {
+    flex-direction: row;
+  }
 }
 .finish .answers .answers-block {
   display: flex;
@@ -1087,6 +1109,12 @@
   color: rgb(31, 216, 18);
   align-self: center;
   margin: 0.5rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .answers .answers-block .question-check {
+    font-size: 1rem;
+  }
 }
 .finish .answers .answers-block .user-box {
   display: flex;
@@ -1097,9 +1125,21 @@
 .finish .answers .answers-block .user-box .user {
   color: rgb(255, 153, 51);
   margin-right: 0.5rem;
+  font-size: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .answers .answers-block .user-box .user {
+    font-size: 1rem;
+  }
 }
 .finish .answers .answers-block .user-box .answer {
   color: rgb(204, 204, 204);
+  font-size: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .answers .answers-block .user-box .answer {
+    font-size: 1rem;
+  }
 }
 .finish .finish-message {
   color: rgb(204, 204, 204);
@@ -1335,7 +1375,9 @@ a:active {
   transform-style: preserve-3d;
   position: relative;
   transform: translateZ(-50vw) rotateY(0deg);
-  /* transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg); */
+  /* transform:
+
+      translateZ(-50vw) rotateX(-90deg) rotateY(90deg); */
 }
 #root .wrapper .app-face {
   position: absolute;

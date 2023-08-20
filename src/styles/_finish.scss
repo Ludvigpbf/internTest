@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
 
     .result {
         color: $mango-yellow;
@@ -12,7 +13,12 @@
 
     .answers {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+
+
+        @include desktop {
+            flex-direction: row;
+        }
 
         .answers-block {
             display: flex;
@@ -24,6 +30,11 @@
                 color: rgb(31, 216, 18);
                 align-self: center;
                 margin: 0.5rem;
+                font-size: $f-xs;
+
+                @include desktop {
+                    font-size: $f-md;
+                }
             }
 
             .user-box {
@@ -35,10 +46,20 @@
                 .user {
                     color: $mango-yellow;
                     margin-right: 0.5rem;
+                    font-size: $f-xxs;
+
+                    @include desktop {
+                        font-size: $f-md;
+                    }
                 }
 
                 .answer {
                     color: $light-gray;
+                    font-size: $f-xxs;
+
+                    @include desktop {
+                        font-size: $f-md;
+                    }
                 }
             }
 
