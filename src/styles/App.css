@@ -1098,7 +1098,11 @@
 }
 .finish .answers {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 10rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 800px) {
   .finish .answers {
@@ -1119,7 +1123,7 @@
 .finish .answers .answers-block .question-check {
   color: rgb(31, 216, 18);
   align-self: center;
-  margin: 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
   font-size: 0.5rem;
 }
 @media screen and (min-width: 800px) {
@@ -1129,6 +1133,7 @@
 }
 .finish .answers .answers-block .user-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.3rem;
@@ -1457,6 +1462,7 @@ a:active {
   transform-style: preserve-3d;
   position: relative;
   transform: translateZ(-50vw) rotateY(0deg);
+  /*  transform: translateZ(-60vw) rotateX(-90deg) rotateY(90deg); */
 }
 #root .wrapper .app-face {
   position: absolute;

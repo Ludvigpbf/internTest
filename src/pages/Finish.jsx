@@ -2,15 +2,20 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header.jsx";
 export const Finish = () => {
   const [username, setUsername] = useState("");
+  const [role, setRole] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("User"));
     const name = user?.name || "";
-    /* const role = user?.role || "";
-    const company = user?.company || ""; */
+    const role = user?.role || "";
+    const company = user?.company || "";
+    const email = user?.email || "";
 
     setUsername(name);
-    /*  setRole(role);
-    setCompany(company); */
+    setRole(role);
+    setCompany(company);
+    setEmail(email);
   }, []);
   return (
     <>
@@ -21,33 +26,33 @@ export const Finish = () => {
           <h2 className="question-check">Question One</h2>
           <div className="user-box">
             <p className="user">Ludvig</p>
-            <p className="answer">This is ludvigs answer one</p>
+            <p className="answer">Eager to learn</p>
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p className="answer">This is users answer one</p>
+            <p className="answer">Eager to learn</p>
           </div>
         </div>
         <div className="answers-block question-two">
           <h2 className="question-check">Question two</h2>
           <div className="user-box">
             <p className="user">Ludvig</p>
-            <p className="answer">This is ludvigs answer two</p>
+            <p className="answer">Creative</p>
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p className="answer">This is users answer two</p>
+            <p className="answer">Creative</p>
           </div>
         </div>
         <div className="answers-block question-three">
           <h2 className="question-check">Question Three</h2>
           <div className="user-box">
             <p className="user">Ludvig</p>
-            <p className="answer">This is your answer three</p>
+            <p className="answer">Fun</p>
           </div>
           <div className="user-box">
             <p className="user">{username}</p>
-            <p className="answer">This is my answer three</p>
+            <p className="answer">Fun</p>
           </div>
         </div>
       </div>
@@ -57,7 +62,8 @@ export const Finish = () => {
       <div className="email">
         <div className="from row">
           <h3>
-            <span>from: </span>user
+            <span>from: </span>
+            {email}
           </h3>
         </div>
         <div className="to row">
@@ -67,11 +73,13 @@ export const Finish = () => {
         </div>
         <div className="subject row">
           <h3>
-            <span>about: </span> Intership
+            <span>about: </span> Intership at {company}
           </h3>
         </div>
         <div className="mail-content">
-          <p>Hi Ludvig! My name is user and Im the role at company</p>
+          <p>
+            Hi Ludvig! My name is {username} and Im the {role} at {company}
+          </p>
         </div>
       </div>
       <button>Send</button>
