@@ -1084,11 +1084,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
 }
 .finish .result {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .result {
+    font-size: 2rem;
+  }
 }
 .finish .answers {
   display: flex;
@@ -1114,7 +1118,7 @@
   color: rgb(31, 216, 18);
   align-self: center;
   margin: 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .question-check {
@@ -1151,11 +1155,11 @@
 }
 .finish .finish-message h2 {
   color: rgb(255, 153, 51);
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 @media screen and (min-width: 800px) {
   .finish .finish-message h2 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 .finish .finish-message p {
@@ -1163,12 +1167,53 @@
 }
 .finish .email {
   background-color: white;
-  height: 30vh;
-  width: 50vw;
-  margin: 4rem;
+  height: 10vh;
+  width: 30vw;
+  margin: 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 800px) {
+  .finish .email {
+    margin: 4rem;
+    height: 30vh;
+    width: 50vw;
+  }
+}
+.finish .email h2 {
+  font-size: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .email h2 {
+    font-size: 2rem;
+  }
+}
+.finish button {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid rgb(255, 153, 51);
+  border-radius: 1rem;
+  color: rgb(255, 153, 51);
+  font-size: 0.5rem;
+  line-height: 1rem;
+  font-weight: 400;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(255, 153, 51), inset 0px 0px 10px rgb(255, 153, 51);
+  margin: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .finish button {
+    border: 2px solid rgb(255, 153, 51);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    margin: 0rem;
+  }
+}
+.finish button:hover {
+  box-shadow: 0px 0px 15px rgb(255, 153, 51), inset 0px 0px 15px rgb(255, 153, 51);
 }
 
 header {
