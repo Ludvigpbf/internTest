@@ -94,9 +94,6 @@
             display: flex;
             align-items: center;
 
-
-            @include desktop {}
-
             .start {
                 position: relative;
                 background-color: transparent;
