@@ -1088,10 +1088,12 @@
 .finish .result {
   color: rgb(255, 153, 51);
   font-size: 1rem;
+  margin-top: -1rem;
 }
 @media screen and (min-width: 800px) {
   .finish .result {
     font-size: 2rem;
+    margin-top: 0rem;
   }
 }
 .finish .answers {
@@ -1134,7 +1136,7 @@
 .finish .answers .answers-block .user-box .user {
   color: rgb(255, 153, 51);
   margin-right: 0.5rem;
-  font-size: 0.5rem;
+  font-size: 0.35rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .user {
@@ -1143,7 +1145,7 @@
 }
 .finish .answers .answers-block .user-box .answer {
   color: rgb(204, 204, 204);
-  font-size: 0.5rem;
+  font-size: 0.35rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .answer {
@@ -1168,11 +1170,12 @@
 .finish .email {
   background-color: white;
   height: 10vh;
-  width: 30vw;
+  width: 40vw;
   margin: 0rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*  justify-content: center; */
+  flex-direction: column;
 }
 @media screen and (min-width: 800px) {
   .finish .email {
@@ -1181,30 +1184,38 @@
     width: 50vw;
   }
 }
-.finish .email h2 {
-  font-size: 0.5rem;
+.finish .email h3 {
+  font-size: 0.35rem;
 }
 @media screen and (min-width: 800px) {
-  .finish .email h2 {
+  .finish .email h3 {
     font-size: 2rem;
   }
 }
-.finish button {
+.finish .email .row {
+  margin-top: 0rem;
+  width: 100%;
+  border: solid 1px rgb(32, 32, 32);
+}
+.finish .email .mail-content p {
+  font-size: 0.35rem;
+}
+.finish .email button {
   position: relative;
   background-color: transparent;
   border: 1px solid rgb(255, 153, 51);
   border-radius: 1rem;
   color: rgb(255, 153, 51);
-  font-size: 0.5rem;
-  line-height: 1rem;
-  font-weight: 400;
+  font-size: 0.35rem;
+  line-height: 0.5rem;
+  font-weight: 500;
   padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   text-align: center;
-  box-shadow: 0px 0px 10px rgb(255, 153, 51), inset 0px 0px 10px rgb(255, 153, 51);
+  box-shadow: 0px 0px 5px rgb(255, 153, 51), inset 0px 0px 5px rgb(255, 153, 51);
   margin: 0.5rem;
 }
 @media screen and (min-width: 800px) {
-  .finish button {
+  .finish .email button {
     border: 2px solid rgb(255, 153, 51);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1212,7 +1223,7 @@
     margin: 0rem;
   }
 }
-.finish button:hover {
+.finish .email button:hover {
   box-shadow: 0px 0px 15px rgb(255, 153, 51), inset 0px 0px 15px rgb(255, 153, 51);
 }
 

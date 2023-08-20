@@ -55,9 +55,21 @@ export const Finish = () => {
         <h2>This is the message</h2>
       </div>
       <div className="email">
-        <h2>This is the email div</h2>
+        <div className="from row">
+          <h3>user</h3>
+        </div>
+        <div className="to row">
+          <h3>info@ludvigflyckt.com</h3>
+        </div>
+        <div className="about row">
+          <h3>This is the email div</h3>
+        </div>
+        <div className="mail-content">
+          <p>Hi Ludvig! My name is user and Im the role at company</p>
+        </div>
+
+        <button>Send</button>
       </div>
-      <button>Send mail</button>
     </>
   );
 };
