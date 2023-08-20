@@ -351,7 +351,7 @@
     transform: translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
   }
   100% {
-    transform: translateZ(-50vw) rotateX(-90deg) rotateY(90deg);
+    transform: translateZ(-45vw) rotateX(-90deg) rotateY(90deg);
     @media screen and (min-width: 800px) {
       transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
     }
@@ -1174,8 +1174,9 @@
   margin: 0rem;
   display: flex;
   align-items: center;
-  /*  justify-content: center; */
+  border-radius: 0.5rem;
   flex-direction: column;
+  /* .to {} */
 }
 @media screen and (min-width: 800px) {
   .finish .email {
@@ -1186,6 +1187,7 @@
 }
 .finish .email h3 {
   font-size: 0.35rem;
+  margin: 0.1rem;
 }
 @media screen and (min-width: 800px) {
   .finish .email h3 {
@@ -1195,12 +1197,25 @@
 .finish .email .row {
   margin-top: 0rem;
   width: 100%;
-  border: solid 1px rgb(32, 32, 32);
+  border-top: solid 1px rgb(32, 32, 32);
+}
+.finish .email span {
+  font-size: 0.35rem;
+  color: rgb(204, 204, 204);
+}
+.finish .email .from {
+  border-radius: 0.4rem 0.4rem 0rem 0rem;
+}
+.finish .email .subject {
+  border-bottom: solid 1px rgb(32, 32, 32);
+}
+.finish .email .mail-content {
+  margin: 0.1rem;
 }
 .finish .email .mail-content p {
   font-size: 0.35rem;
 }
-.finish .email button {
+.finish button {
   position: relative;
   background-color: transparent;
   border: 1px solid rgb(255, 153, 51);
@@ -1215,7 +1230,7 @@
   margin: 0.5rem;
 }
 @media screen and (min-width: 800px) {
-  .finish .email button {
+  .finish button {
     border: 2px solid rgb(255, 153, 51);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1223,7 +1238,7 @@
     margin: 0rem;
   }
 }
-.finish .email button:hover {
+.finish button:hover {
   box-shadow: 0px 0px 15px rgb(255, 153, 51), inset 0px 0px 15px rgb(255, 153, 51);
 }
 
@@ -1441,8 +1456,7 @@ a:active {
   height: 100%;
   transform-style: preserve-3d;
   position: relative;
-  /* transform: translateZ(-50vw) rotateY(0deg); */
-  transform: translateZ(-45vw) rotateX(-90deg) rotateY(90deg);
+  transform: translateZ(-50vw) rotateY(0deg);
 }
 #root .wrapper .app-face {
   position: absolute;

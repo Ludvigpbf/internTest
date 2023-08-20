@@ -56,20 +56,25 @@ export const Finish = () => {
       </div>
       <div className="email">
         <div className="from row">
-          <h3>user</h3>
+          <h3>
+            <span>from: </span>user
+          </h3>
         </div>
         <div className="to row">
-          <h3>info@ludvigflyckt.com</h3>
+          <h3>
+            <span>to: </span> info@ludvigflyckt.com
+          </h3>
         </div>
-        <div className="about row">
-          <h3>This is the email div</h3>
+        <div className="subject row">
+          <h3>
+            <span>about: </span> Intership
+          </h3>
         </div>
         <div className="mail-content">
           <p>Hi Ludvig! My name is user and Im the role at company</p>
         </div>
-
-        <button>Send</button>
       </div>
+      <button>Send</button>
     </>
   );
 };

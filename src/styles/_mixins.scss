@@ -529,7 +529,7 @@ $forest-green: hsl(120, 45%, 35%);
     100% {
         transform:
 
-            translateZ(-50vw) rotateX(-90deg) rotateY(90deg);
+            translateZ(-45vw) rotateX(-90deg) rotateY(90deg);
 
         @include desktop {
             transform:
