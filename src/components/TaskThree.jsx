@@ -35,7 +35,7 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
 
   return (
     <div className="container">
-      <h1>An intern should be..</h1>
+      <h1>Important qualitys are...</h1>
       <form className="questionnaire-form" onSubmit={handleSubmit}>
         <div className="question">
           <div className="checkboxes">
@@ -46,7 +46,7 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
                 checked={answers.options.includes("option1")}
                 onChange={() => handleOptionChange("option1")}
               />
-              <span>Initiative</span>
+              <span>communicative.</span>
             </label>
             <label className="custom-checkbox">
               <input
@@ -70,8 +70,8 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
               <input
                 type="checkbox"
                 name="fun"
-                checked={answers.options.includes("fun")}
-                onChange={() => handleOptionChange("fun")}
+                checked={answers.options.includes("option4")}
+                onChange={() => handleOptionChange("option4")}
               />
               <span>Fun</span>
             </label>
