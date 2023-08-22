@@ -14,59 +14,46 @@ function App() {
   const [showHeader, setShowHeader] = useState(false);
   const [checkAnswers, setCheckAnswers] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
-
-  /*  useEffect(() => {
-    if (checkAnswers) {
-      setCheckAnswers(true);
-      console.log(checkAnswers);
-      setShowGreeting(true);
-      console.log(showGreeting);
-
-      console.log("function works");
-      setTimeout(() => {
-        setCheckAnswers(false);
-
-        handleClickNext();
-      }, 6000);
-    }
-  }, [checkAnswers, showGreeting]); */
-
-  /*  useEffect(() => {
-    if (checkAnswers) {
-      setCheckAnswers(true);
-      setShowGreeting(true);
-    }
-  }, [checkAnswers]);
-
-  useEffect(() => {
-    if (showGreeting) {
-      console.log(showGreeting);
-      setTimeout(() => {
-        setCheckAnswers(false);
-        handleClickNext();
-      }, 6000);
-    }
-  }, [showGreeting]); */
+  const [userData, setUserData] = useState({
+    name: "",
+    role: "",
+    company: "",
+    email: "",
+  });
+  const [answersOne, setAnswersOne] = useState([]);
+  const [answersTwo, setAnswersTwo] = useState([]);
+  const [answersThree, setAnswersThree] = useState([]);
 
   useEffect(() => {
     if (checkAnswers) {
       setCheckAnswers(true);
-
-      console.log("function works");
-
       setTimeout(() => {
-        console.log(showGreeting);
         setCheckAnswers(false);
         setShowGreeting(true);
         handleClickNext();
       }, 6000);
     }
-    console.log(showGreeting);
   }, [checkAnswers, showGreeting]);
 
   const handleClickNext = () => {
     setIsClicked(true);
     setShowHeader(true);
+    const user = JSON.parse(localStorage.getItem("User")) || {};
+    setUserData(user);
+
+    const questionOneData =
+      JSON.parse(localStorage.getItem("QuestionOne")) || {};
+    const answersOneData = questionOneData?.options || [];
+    setAnswersOne(answersOneData);
+
+    const questionTwo = JSON.parse(localStorage.getItem("QuestionTwo")) || {};
+    const answersTwoData = questionTwo?.options || [];
+    setAnswersTwo(answersTwoData);
+
+    const questionThree =
+      JSON.parse(localStorage.getItem("QuestionThree")) || {};
+    const answersThreeData = questionThree?.options || [];
+    setAnswersThree(answersThreeData);
 
     if (currentPage === "landing") {
       setCurrentPage("about");
@@ -82,16 +69,30 @@ function App() {
   };
 
   const getPageAnimationClass = (pageName) => {
-    if (pageName === "about") {
-      return isClicked ? "right-animation" : "";
-    } else if (pageName === "form") {
-      return isClicked ? "back-animation" : "";
-    } else if (pageName === "loading") {
-      return isClicked ? "bottom-animation" : "";
-    } else if (pageName === "result-greeting") {
-      return isClicked ? "left-animation" : "";
-    } else if (pageName === "finish") {
-      return isClicked ? "top-animation" : "";
+    if (window.innerWidth >= 768) {
+      if (pageName === "about") {
+        return isClicked ? "right-animation" : "";
+      } else if (pageName === "form") {
+        return isClicked ? "back-animation" : "";
+      } else if (pageName === "loading") {
+        return isClicked ? "bottom-animation-desktop" : "";
+      } else if (pageName === "result-greeting") {
+        return isClicked ? "left-animation" : "";
+      } else if (pageName === "finish") {
+        return isClicked ? "top-animation-desktop" : "";
+      }
+    } else {
+      if (pageName === "about") {
+        return isClicked ? "right-animation" : "";
+      } else if (pageName === "form") {
+        return isClicked ? "back-animation" : "";
+      } else if (pageName === "loading") {
+        return isClicked ? "bottom-animation" : "";
+      } else if (pageName === "result-greeting") {
+        return isClicked ? "left-animation" : "";
+      } else if (pageName === "finish") {
+        return isClicked ? "top-animation" : "";
+      }
     }
     return "";
   };
@@ -133,10 +134,17 @@ function App() {
               onClickNext={handleClickNext}
               showHeader={showHeader}
               showGreeting={showGreeting}
+              userData={userData}
             />
           </section>
           <section className="app-face finish">
-            <Finish onClickNext={handleClickNext} />
+            <Finish
+              onClickNext={handleClickNext}
+              userData={userData}
+              answersOne={answersOne}
+              answersTwo={answersTwo}
+              answersThree={answersThree}
+            />
           </section>
         </div>
       </div>

@@ -7,26 +7,30 @@
 
     .greeting-content {
 
-        .greeting-wrapper {
-            opacity: 1;
 
-        }
 
         .show-content {
-            opacity: 1;
             display: flex;
             flex-direction: column;
 
             h1 {
                 color: $light-gray;
-                font-size: $f-xl;
+                font-size: $f-xxl;
                 font-weight: $light;
                 margin: -0.1rem;
 
-                .username {
+                @include desktop {
                     font-size: $f-xl;
+                }
+
+                .username {
+                    font-size: $f-xxl;
                     color: $mango-yellow;
                     font-weight: $medium;
+
+                    @include desktop {
+                        font-size: $f-xl;
+                    }
                 }
             }
 
@@ -57,7 +61,7 @@
             .paragraph-2 {
                 color: $light-gray;
                 width: 80vw;
-                margin-top: 1rem;
+                /* margin-top: 1rem; */
                 margin-bottom: 1rem;
                 padding: 0rem;
 

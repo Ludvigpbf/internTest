@@ -36,7 +36,7 @@ export const TaskTwo = ({ nextQuestion }) => {
   return (
     <>
       <div className="container">
-        <h1>An intern should be..</h1>
+        <h1>An internship should...</h1>
         <form className="questionnaire-form" onSubmit={handleSubmit}>
           <div className="question">
             <div className="checkboxes">
@@ -44,10 +44,17 @@ export const TaskTwo = ({ nextQuestion }) => {
                 <input
                   type="checkbox"
                   name="option1"
-                  checked={answers.options.includes("option1")}
-                  onChange={() => handleOptionChange("option1")}
+                  checked={answers.options.includes(
+                    "Provide clear expectations"
+                  )}
+                  onChange={() =>
+                    handleOptionChange("Provide clear expectations")
+                  }
                 />
-                <span>Initiative</span>
+                <span>
+                  provide interns with structured training and clear
+                  expectations.
+                </span>
               </label>
               <label className="custom-checkbox">
                 <input
@@ -56,7 +63,7 @@ export const TaskTwo = ({ nextQuestion }) => {
                   checked={answers.options.includes("option2")}
                   onChange={() => handleOptionChange("option2")}
                 />
-                <span>Eager to learn</span>
+                <span>take advantage of the free labor of interns.</span>
               </label>
               <label className="custom-checkbox">
                 <input
@@ -65,7 +72,10 @@ export const TaskTwo = ({ nextQuestion }) => {
                   checked={answers.options.includes("option3")}
                   onChange={() => handleOptionChange("option3")}
                 />
-                <span>Organized</span>
+                <span>
+                  create a work environment that is creative and open to
+                  experimentation.
+                </span>
               </label>
               <label className="custom-checkbox">
                 <input
@@ -74,7 +84,10 @@ export const TaskTwo = ({ nextQuestion }) => {
                   checked={answers.options.includes("option4")}
                   onChange={() => handleOptionChange("option4")}
                 />
-                <span>Fun</span>
+                <span>
+                  offer interns the opportunity to benefit from experienced
+                  mentors and available resources.
+                </span>
               </label>
             </div>
           </div>

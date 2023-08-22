@@ -142,6 +142,10 @@ a {
             animation: bottom-animation 2.5s forwards ease-in-out;
         }
 
+        .bottom-animation-desktop {
+            animation: bottom-animation-desktop 2.5s forwards ease-in-out;
+        }
+
         .loading {
             height: 100vw;
             transform: rotateX(90deg) rotateY(180deg) translateZ(50vh);
@@ -159,6 +163,12 @@ a {
 
         .top-animation {
             animation: top-animation 2.5s forwards ease-in-out;
+
+        }
+
+        .top-animation-desktop {
+            animation: top-animation-desktop 2.5s forwards ease-in-out;
+
         }
 
         .finish {

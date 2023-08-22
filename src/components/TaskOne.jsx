@@ -36,7 +36,7 @@ export const TaskOne = ({ nextQuestion }) => {
     <>
       {" "}
       <div className="container">
-        <h1>An intership should be..</h1>
+        <h1>An intern should...</h1>
         <form className="questionnaire-form" onSubmit={handleSubmit}>
           <div className="question">
             <div className="checkboxes">
@@ -44,37 +44,49 @@ export const TaskOne = ({ nextQuestion }) => {
                 <input
                   type="checkbox"
                   name="option1"
-                  checked={answers.options.includes("option1")}
-                  onChange={() => handleOptionChange("option1")}
+                  checked={answers.options.includes("Be eager to learn")}
+                  onChange={() => handleOptionChange("Be eager to learn")}
                 />
-                <span>Creative</span>
+                <span>be eager to learn from experienced professionals.</span>
               </label>
               <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   name="option2"
-                  checked={answers.options.includes("option2")}
-                  onChange={() => handleOptionChange("option2")}
+                  checked={answers.options.includes(
+                    "Seek self-directed learning"
+                  )}
+                  onChange={() =>
+                    handleOptionChange("Seek self-directed learning")
+                  }
                 />
-                <span>Static</span>
+                <span>
+                  seek self-directed learning with occasional guidance.
+                </span>
               </label>
               <label className="custom-checkbox">
                 <input
                   type="checkbox"
                   name="option3"
-                  checked={answers.options.includes("option3")}
-                  onChange={() => handleOptionChange("option3")}
+                  checked={answers.options.includes("Ignore feedback")}
+                  onChange={() => handleOptionChange("Ignore feedback")}
                 />
-                <span>Organized</span>
+                <span>ignore feedback and suggestions from colleagues.</span>
               </label>
               <label className="custom-checkbox">
                 <input
                   type="checkbox"
-                  name="fun"
-                  checked={answers.options.includes("fun")}
-                  onChange={() => handleOptionChange("fun")}
+                  name="option4"
+                  checked={answers.options.includes(
+                    "Prefer a creative environment"
+                  )}
+                  onChange={() =>
+                    handleOptionChange("Prefer a creative environment")
+                  }
                 />
-                <span>Fun</span>
+                <span>
+                  prefer a work environment that is collaborative and creative.
+                </span>
               </label>
             </div>
           </div>

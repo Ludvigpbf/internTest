@@ -1,38 +1,33 @@
-import { useEffect, useState } from "react";
+/* import {} from "react"; */
+import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
-export const Greeting = ({ onClickNext, showGreeting }) => {
-  const [username, setUsername] = useState("");
-  const [role, setRole] = useState("");
-  const [company, setCompany] = useState("");
-
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("User"));
-    const name = user?.name || "";
-    const role = user?.role || "";
-    const company = user?.company || "";
-
-    setUsername(name);
-    setRole(role);
-    setCompany(company);
-  }, []);
-
+export const Greeting = ({ onClickNext, showGreeting, userData }) => {
+  Greeting.propTypes = {
+    onClickNext: PropTypes.func.isRequired,
+    showGreeting: PropTypes.bool.isRequired,
+    userData: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      role: PropTypes.string.isRequired,
+      company: PropTypes.string.isRequired,
+    }).isRequired,
+  };
   return (
     <div className="greeting-content">
       <div className={`greeting-wrapper ${showGreeting ? "show-content" : ""}`}>
         <h1>
           {" "}
-          Hi <span className="username">{username}</span>
+          Hi <span className="username">{userData.name}</span>!
         </h1>
         <p className="paragraph-1">
-          I see that you work as <span className="role">{role} </span>
-          at <span className="company">{company}</span>
+          Wow, so you work as <span className="role">{userData.role} </span>
+          at <span className="company">{userData.company}</span>. Impressive!
+          Maby one day I&apos;ll work there to!
         </p>
         <p className="paragraph-2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
-          molestiae reiciendis suscipit pariatur animi. Magni quibusdam, iure
-          asperiores maxime ipsum exercitationem nihil laboriosam totam beatae
-          nam nesciunt, magnam quas architecto.
+          Well thank you <span>{userData.name}</span> for taking the time to do
+          this quiz, it means alot to me. I hope you had fun, I sure had. Did
+          you know I made it with React, SCSS and alot of coffee?
         </p>
         <p className="result-link">
           Click{" "}

@@ -85,6 +85,10 @@
                     font-size: $f-md;
                     width: 25rem;
                 }
+
+                span {
+                    color: $mango-yellow;
+                }
             }
         }
 
@@ -97,18 +101,19 @@
             .start {
                 position: relative;
                 background-color: transparent;
-                border: 2px solid $mango-yellow;
-                border-radius: 1rem;
+                border: 1px solid $mango-yellow;
+                border-radius: 0.5rem;
                 color: $mango-yellow;
                 font-size: $f-md;
                 line-height: 1.5rem;
                 font-weight: $regular;
                 padding: 0.5rem;
                 text-align: center;
-                box-shadow: 0px 0px 10px $mango-yellow, inset 0px 0px 10px $mango-yellow;
+
 
                 &:hover {
-                    box-shadow: 0px 0px 15px $mango-yellow, inset 0px 0px 15px $mango-yellow;
+                    box-shadow: 0px 0px 5px $muted-yellow,
+                        0px 0px 0px $warm-yellow, 0px 0px 0px $warm-yellow;
                 }
             }
         }

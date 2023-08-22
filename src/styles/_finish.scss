@@ -8,7 +8,7 @@
 
     .result {
         color: $mango-yellow;
-        font-size: $f-md;
+        font-size: $f-sm;
         margin-top: -1rem;
 
         @include desktop {
@@ -27,6 +27,7 @@
 
         @include desktop {
             flex-direction: row;
+            width: 80vw;
         }
 
         .answers-block {
@@ -34,19 +35,27 @@
             flex-direction: column;
             margin: 0rem;
             color: $light-gray;
+            padding: 0.1rem;
+            border-radius: 1rem;
 
             @include desktop {
-                margin: 3rem;
+                margin: 3rem 4rem 3rem 4rem;
+                padding: 1rem;
+                border: $mango-yellow 1px solid;
+
             }
 
             .question-check {
-                color: rgb(31, 216, 18);
+                color: $mango-yellow-hover;
                 align-self: center;
-                margin: 0.5rem 0.5rem 0rem 0.5rem;
-                font-size: $f-xxs;
+                margin: 0.5rem 0.5rem 0.1rem 0.5rem;
+                font-size: $f-xxxs;
+                text-decoration: underline;
+                text-underline-offset: 0.1rem;
 
                 @include desktop {
                     font-size: $f-md;
+                    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
                 }
             }
 
@@ -57,21 +66,27 @@
                 justify-content: flex-start;
                 margin-bottom: 0.3rem;
 
+                @include desktop {
+                    flex-direction: row;
+                }
+
                 .user {
                     color: $mango-yellow;
-                    font-size: $f-xxxs;
+                    font-size: $f-xxxxs;
 
                     @include desktop {
-                        font-size: $f-md;
+                        font-size: $f-xs;
+                        margin-right: 0.3rem;
                     }
                 }
 
                 .answer {
                     color: $light-gray;
-                    font-size: $f-xxxs;
+                    font-size: $f-xxxxs;
 
                     @include desktop {
-                        font-size: $f-md;
+                        font-size: $f-xs;
+                        margin-right: 0.5rem;
                     }
                 }
             }
@@ -84,13 +99,14 @@
     .finish-message {
         color: $light-gray;
 
-
         h2 {
             color: $mango-yellow;
-            font-size: $f-xxs;
+            font-size: $f-xxxs;
+            width: 30vw;
+            text-align: center;
 
             @include desktop {
-                font-size: $f-lg;
+                font-size: $f-md;
             }
         }
 
@@ -120,7 +136,7 @@
             margin: 0.1rem;
 
             @include desktop {
-                font-size: $f-lg;
+                font-size: $f-xs;
             }
         }
 
@@ -134,23 +150,31 @@
         span {
             font-size: $f-xxxs;
             color: $light-gray;
+
+            @include desktop {
+                font-size: $f-xs;
+                color: $medium-gray;
+            }
         }
 
         .from {
             border-radius: 0.4rem 0.4rem 0rem 0rem;
         }
 
-        /* .to {} */
-
         .subject {
             border-bottom: solid 1px $black-gray;
         }
 
-        .mail-content {
+        .mail-content-box {
             margin: 0.1rem;
+            align-self: flex-start;
 
-            p {
+            .mail-content {
                 font-size: $f-xxxs;
+
+                @include desktop {
+                    font-size: $f-xs;
+                }
             }
         }
     }
@@ -173,7 +197,7 @@
             border: 2px solid $mango-yellow;
             font-size: $f-md;
             line-height: 1.5rem;
-            padding: 0.5rem;
+            padding: 0.1rem 0.5rem 0.1rem 0.5rem;
             margin: 0rem;
 
         }

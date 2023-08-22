@@ -24,11 +24,15 @@ export const About = ({ onClickNext, showLine }) => {
       <div className="what-card">
         <h2 className="what-title">What is this?</h2>
         <p className="what-info">
-          To find my dream intership I made this test to see if I can find a
-          place that is as creative as me and like to think outside the box. The
-          test consist of 3 steps and to solve them it helps if you know how to
-          code. There are hints, but you will need to find them to get them. If
-          you manage to solve them all i think we are a match.
+          {/* To find my dream intership I made this quiz to see if I can find a
+          place that is as creative as me and like to think outside the box,
+          literary. The quiz consist of three questions, all with multiple
+          answerchoises. At the end we'll see if we are a match or not. */}
+          In my quest for the perfect internship, I&apos;ve put together a fun
+          quiz. It&apos;s a way to see if I can find a place that&apos;s as
+          creative and out-of-the-box thinking as I am. The quiz consists of
+          three questions, each with multiple answer choices. Let&apos;s see if
+          we&apos;re a match! <span>Good luck!</span>
         </p>
       </div>
       <div className="button-container">

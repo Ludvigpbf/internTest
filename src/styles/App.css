@@ -82,175 +82,6 @@
     transform: translateX(0%) translateY(-100%);
   }
 }
-/* 
-@keyframes right-animation {
-
-    0% {
-        transform: translateZ(-100vw) rotateY(0deg);
-    }
-
-
-    20% {
-        transform: translateZ(-150vw) rotateY(0deg);
-    }
-
-    30% {
-        transform: translateZ(-150vw) rotateY(5deg);
-    }
-
-    65% {
-        transform:
-
-            translateZ(-150vw) rotateY(-95deg);
-    }
-
-    80% {
-        transform:
-
-            translateZ(-150vw)rotateY(-90deg);
-    }
-
-    100% {
-        transform:
-            translateZ(-100vw) rotateY(-90deg);
-    }
-}
-
-
-@keyframes back-animation {
-
-    0% {
-        transform: translateZ(-100vw) rotateY(-90deg);
-    }
-
-
-    20% {
-        transform: translateZ(-150vw) rotateY(-90deg);
-    }
-
-    30% {
-        transform: translateZ(-150vw) rotateY(-85deg);
-    }
-
-    65% {
-        transform:
-
-            translateZ(-150vw) rotateY(-185deg);
-    }
-
-    80% {
-        transform:
-
-            translateZ(-150vw) rotateY(-180deg);
-    }
-
-    100% {
-        transform:
-
-            translateZ(-100vw) rotateY(-180deg);
-    }
-}
-
-
-@keyframes bottom-animation {
-
-    0% {
-        transform: translateZ(-100vw) rotateY(-180deg);
-    }
-
-
-    20% {
-        transform: translateZ(-150vw) rotateY(-180deg);
-    }
-
-    30% {
-        transform: translateZ(-150vw) rotateY(-180deg) rotateX(5deg);
-    }
-
-    65% {
-        transform:
-
-            translateZ(-150vw) rotateY(-180deg) rotateX(-100deg);
-    }
-
-    80% {
-        transform:
-
-            translateZ(-150vw) rotateY(-180deg) rotateX(-90deg);
-    }
-
-    100% {
-        transform:
-
-            translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
-    }
-}
-
-@keyframes left-animation {
-
-    0% {
-        transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
-    }
-
-
-    20% {
-        transform: translateZ(-150vw) rotateY(-180deg) rotateX(-90deg);
-    }
-
-    30% {
-        transform: translateZ(-150vw) rotateY(-180deg) rotateX(-100deg);
-    }
-
-    65% {
-        transform:
-
-            translateZ(-150vw) rotateY(-270deg) rotateX(10deg);
-    }
-
-    80% {
-        transform:
-
-            translateZ(-150vw) rotateY(-270deg) rotateX(0deg);
-    }
-
-    100% {
-        transform: translateZ(-100vw) rotateY(-270deg) rotateX(0deg);
-    }
-}
-
-@keyframes top-animation {
-
-    0% {
-        transform: translateZ(-100vw) rotateY(-270deg) rotateX(0deg);
-    }
-
-
-    20% {
-        transform: translateZ(-150vw) rotateX(1deg) rotateY(90deg);
-    }
-
-    30% {
-        transform: translateZ(-150vw) rotateX(6deg) rotateY(90deg);
-    }
-
-    65% {
-        transform:
-
-            translateZ(-150vw) rotateX(-95deg) rotateY(90deg);
-    }
-
-    80% {
-        transform:
-
-            translateZ(-150vw) rotateX(-90deg) rotateY(90deg);
-    }
-
-    100% {
-        transform:
-
-            translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
-    }
-} */
 @keyframes right-animation {
   0% {
     transform: translateZ(-50vw) rotateY(0deg);
@@ -309,9 +140,26 @@
   }
   100% {
     transform: translateZ(-50vw) rotateY(-180deg) rotateX(-90deg);
-    @media screen and (min-width: 800px) {
-      transform: translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
-    }
+  }
+}
+@keyframes bottom-animation-desktop {
+  0% {
+    transform: translateZ(-50vw) rotateY(-180deg);
+  }
+  20% {
+    transform: translateZ(-100vw) rotateY(-180deg);
+  }
+  30% {
+    transform: translateZ(-100vw) rotateY(-180deg) rotateX(5deg);
+  }
+  65% {
+    transform: translateZ(-100vw) rotateY(-180deg) rotateX(-100deg);
+  }
+  80% {
+    transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
+  }
+  100% {
+    transform: translateZ(-23vw) rotateY(-180deg) rotateX(-90deg);
   }
 }
 @keyframes left-animation {
@@ -352,9 +200,26 @@
   }
   100% {
     transform: translateZ(-45vw) rotateX(-90deg) rotateY(90deg);
-    @media screen and (min-width: 800px) {
-      transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
-    }
+  }
+}
+@keyframes top-animation-desktop {
+  0% {
+    transform: translateZ(-50vw) rotateY(-270deg) rotateX(0deg);
+  }
+  20% {
+    transform: translateZ(-100vw) rotateX(1deg) rotateY(90deg);
+  }
+  30% {
+    transform: translateZ(-100vw) rotateX(6deg) rotateY(90deg);
+  }
+  65% {
+    transform: translateZ(-100vw) rotateX(-95deg) rotateY(90deg);
+  }
+  80% {
+    transform: translateZ(-100vw) rotateX(-90deg) rotateY(90deg);
+  }
+  100% {
+    transform: translateZ(-23vw) rotateX(-90deg) rotateY(90deg);
   }
 }
 .landing {
@@ -523,6 +388,8 @@
   font-weight: 400;
   padding: 0.5rem;
   margin-left: 0.5rem;
+  border: 1px solid rgb(255, 153, 51);
+  border-radius: 0.5rem;
 }
 .landing .hero .continue .find-out:hover {
   border: 1px solid rgb(255, 153, 51);
@@ -640,6 +507,9 @@
     width: 25rem;
   }
 }
+.about .about-content .what-card .what-info span {
+  color: rgb(255, 153, 51);
+}
 .about .about-content .button-container {
   display: flex;
   align-items: center;
@@ -647,18 +517,17 @@
 .about .about-content .button-container .start {
   position: relative;
   background-color: transparent;
-  border: 2px solid rgb(255, 153, 51);
-  border-radius: 1rem;
+  border: 1px solid rgb(255, 153, 51);
+  border-radius: 0.5rem;
   color: rgb(255, 153, 51);
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
   padding: 0.5rem;
   text-align: center;
-  box-shadow: 0px 0px 10px rgb(255, 153, 51), inset 0px 0px 10px rgb(255, 153, 51);
 }
 .about .about-content .button-container .start:hover {
-  box-shadow: 0px 0px 15px rgb(255, 153, 51), inset 0px 0px 15px rgb(255, 153, 51);
+  box-shadow: 0px 0px 5px rgb(255, 204, 153), 0px 0px 0px rgb(255, 204, 0), 0px 0px 0px rgb(255, 204, 0);
 }
 
 .task-one {
@@ -678,22 +547,22 @@
 }
 .task-one h1 {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-one h1 {
-    font-size: 3vw;
+    font-size: 2rem;
   }
 }
 .task-one .container {
-  width: 20rem;
+  width: 25rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 @media screen and (min-width: 800px) {
   .task-one .container {
-    max-width: 600px;
+    width: 40rem;
   }
 }
 .task-one .questionnaire-form .question {
@@ -702,7 +571,7 @@
   margin-bottom: 20px;
 }
 .task-one .questionnaire-form .question .checkboxes {
-  width: 70vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -710,7 +579,7 @@
 }
 @media screen and (min-width: 800px) {
   .task-one .questionnaire-form .question .checkboxes {
-    width: 25vw;
+    width: 60vw;
   }
 }
 .task-one .questionnaire-form .question .checkboxes .custom-checkbox {
@@ -718,12 +587,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5rem;
+  width: 10rem;
   margin: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-one .questionnaire-form .question .checkboxes .custom-checkbox {
     margin: 2rem;
+    width: 15rem;
   }
 }
 .task-one .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
@@ -741,6 +611,7 @@
 }
 .task-one .questionnaire-form .question .checkboxes .custom-checkbox span {
   margin-top: 0.5rem;
+  font-size: 0.75rem;
 }
 .task-one .alert-text {
   color: red;
@@ -774,22 +645,22 @@
 }
 .task-two h1 {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-two h1 {
-    font-size: 3vw;
+    font-size: 2rem;
   }
 }
 .task-two .container {
-  width: 20rem;
+  width: 25rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 @media screen and (min-width: 800px) {
   .task-two .container {
-    max-width: 600px;
+    width: 40rem;
   }
 }
 .task-two .questionnaire-form .question {
@@ -798,7 +669,7 @@
   margin-bottom: 20px;
 }
 .task-two .questionnaire-form .question .checkboxes {
-  width: 70vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -806,7 +677,7 @@
 }
 @media screen and (min-width: 800px) {
   .task-two .questionnaire-form .question .checkboxes {
-    width: 25vw;
+    width: 60vw;
   }
 }
 .task-two .questionnaire-form .question .checkboxes .custom-checkbox {
@@ -814,12 +685,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5rem;
+  width: 10rem;
   margin: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-two .questionnaire-form .question .checkboxes .custom-checkbox {
     margin: 2rem;
+    width: 15rem;
   }
 }
 .task-two .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
@@ -837,6 +709,7 @@
 }
 .task-two .questionnaire-form .question .checkboxes .custom-checkbox span {
   margin-top: 0.5rem;
+  font-size: 0.75rem;
 }
 .task-two .alert-text {
   color: red;
@@ -870,22 +743,22 @@
 }
 .task-three h1 {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-three h1 {
-    font-size: 3vw;
+    font-size: 2rem;
   }
 }
 .task-three .container {
-  width: 20rem;
+  width: 25rem;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 @media screen and (min-width: 800px) {
   .task-three .container {
-    max-width: 600px;
+    width: 40rem;
   }
 }
 .task-three .questionnaire-form .question {
@@ -894,7 +767,7 @@
   margin-bottom: 20px;
 }
 .task-three .questionnaire-form .question .checkboxes {
-  width: 70vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -902,7 +775,7 @@
 }
 @media screen and (min-width: 800px) {
   .task-three .questionnaire-form .question .checkboxes {
-    width: 25vw;
+    width: 60vw;
   }
 }
 .task-three .questionnaire-form .question .checkboxes .custom-checkbox {
@@ -910,12 +783,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5rem;
+  width: 10rem;
   margin: 1rem;
 }
 @media screen and (min-width: 800px) {
   .task-three .questionnaire-form .question .checkboxes .custom-checkbox {
     margin: 2rem;
+    width: 15rem;
   }
 }
 .task-three .questionnaire-form .question .checkboxes .custom-checkbox input[type=checkbox] {
@@ -933,6 +807,7 @@
 }
 .task-three .questionnaire-form .question .checkboxes .custom-checkbox span {
   margin-top: 0.5rem;
+  font-size: 0.75rem;
 }
 .task-three .alert-text {
   color: red;
@@ -1008,24 +883,30 @@
   justify-content: center;
   width: 10vw;
 }
-.result-greeting .greeting-content .greeting-wrapper {
-  opacity: 1;
-}
 .result-greeting .greeting-content .show-content {
-  opacity: 1;
   display: flex;
   flex-direction: column;
 }
 .result-greeting .greeting-content .show-content h1 {
   color: rgb(204, 204, 204);
-  font-size: 3vw;
+  font-size: 4rem;
   font-weight: 300;
   margin: -0.1rem;
 }
+@media screen and (min-width: 800px) {
+  .result-greeting .greeting-content .show-content h1 {
+    font-size: 3vw;
+  }
+}
 .result-greeting .greeting-content .show-content h1 .username {
-  font-size: 3vw;
+  font-size: 4rem;
   color: rgb(255, 153, 51);
   font-weight: 500;
+}
+@media screen and (min-width: 800px) {
+  .result-greeting .greeting-content .show-content h1 .username {
+    font-size: 3vw;
+  }
 }
 .result-greeting .greeting-content .show-content .paragraph-1 {
   color: rgb(204, 204, 204);
@@ -1052,7 +933,7 @@
 .result-greeting .greeting-content .show-content .paragraph-2 {
   color: rgb(204, 204, 204);
   width: 80vw;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 1rem;
   padding: 0rem;
 }
@@ -1087,7 +968,7 @@
 }
 .finish .result {
   color: rgb(255, 153, 51);
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-top: -1rem;
 }
 @media screen and (min-width: 800px) {
@@ -1107,6 +988,7 @@
 @media screen and (min-width: 800px) {
   .finish .answers {
     flex-direction: row;
+    width: 80vw;
   }
 }
 .finish .answers .answers-block {
@@ -1114,21 +996,28 @@
   flex-direction: column;
   margin: 0rem;
   color: rgb(204, 204, 204);
+  padding: 0.1rem;
+  border-radius: 1rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block {
-    margin: 3rem;
+    margin: 3rem 4rem 3rem 4rem;
+    padding: 1rem;
+    border: rgb(255, 153, 51) 1px solid;
   }
 }
 .finish .answers .answers-block .question-check {
-  color: rgb(31, 216, 18);
+  color: rgb(220, 125, 31);
   align-self: center;
-  margin: 0.5rem 0.5rem 0rem 0.5rem;
-  font-size: 0.5rem;
+  margin: 0.5rem 0.5rem 0.1rem 0.5rem;
+  font-size: 0.35rem;
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .question-check {
     font-size: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
 }
 .finish .answers .answers-block .user-box {
@@ -1138,22 +1027,29 @@
   justify-content: flex-start;
   margin-bottom: 0.3rem;
 }
+@media screen and (min-width: 800px) {
+  .finish .answers .answers-block .user-box {
+    flex-direction: row;
+  }
+}
 .finish .answers .answers-block .user-box .user {
   color: rgb(255, 153, 51);
-  font-size: 0.35rem;
+  font-size: 0.25rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .user {
-    font-size: 1rem;
+    font-size: 0.75rem;
+    margin-right: 0.3rem;
   }
 }
 .finish .answers .answers-block .user-box .answer {
   color: rgb(204, 204, 204);
-  font-size: 0.35rem;
+  font-size: 0.25rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .answer {
-    font-size: 1rem;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
   }
 }
 .finish .finish-message {
@@ -1161,11 +1057,13 @@
 }
 .finish .finish-message h2 {
   color: rgb(255, 153, 51);
-  font-size: 0.5rem;
+  font-size: 0.35rem;
+  width: 30vw;
+  text-align: center;
 }
 @media screen and (min-width: 800px) {
   .finish .finish-message h2 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 .finish .finish-message p {
@@ -1180,7 +1078,6 @@
   align-items: center;
   border-radius: 0.5rem;
   flex-direction: column;
-  /* .to {} */
 }
 @media screen and (min-width: 800px) {
   .finish .email {
@@ -1195,7 +1092,7 @@
 }
 @media screen and (min-width: 800px) {
   .finish .email h3 {
-    font-size: 2rem;
+    font-size: 0.75rem;
   }
 }
 .finish .email .row {
@@ -1207,17 +1104,29 @@
   font-size: 0.35rem;
   color: rgb(204, 204, 204);
 }
+@media screen and (min-width: 800px) {
+  .finish .email span {
+    font-size: 0.75rem;
+    color: rgb(102, 102, 102);
+  }
+}
 .finish .email .from {
   border-radius: 0.4rem 0.4rem 0rem 0rem;
 }
 .finish .email .subject {
   border-bottom: solid 1px rgb(32, 32, 32);
 }
-.finish .email .mail-content {
+.finish .email .mail-content-box {
   margin: 0.1rem;
+  align-self: flex-start;
 }
-.finish .email .mail-content p {
+.finish .email .mail-content-box .mail-content {
   font-size: 0.35rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .email .mail-content-box .mail-content {
+    font-size: 0.75rem;
+  }
 }
 .finish button {
   position: relative;
@@ -1238,7 +1147,7 @@
     border: 2px solid rgb(255, 153, 51);
     font-size: 1rem;
     line-height: 1.5rem;
-    padding: 0.5rem;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
     margin: 0rem;
   }
 }
@@ -1328,10 +1237,16 @@ header .squares img {
 }
 .register .container .header-text .info .popup {
   position: absolute;
-  bottom: 1rem;
-  right: 20rem;
+  bottom: 7rem;
+  right: 0rem;
   color: rgb(255, 153, 51);
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 800px) {
+  .register .container .header-text .info .popup {
+    bottom: 1rem;
+    right: 20rem;
+  }
 }
 .register .container .questionnaire-form {
   margin-top: 30px;
@@ -1489,6 +1404,9 @@ a:active {
 #root .wrapper .bottom-animation {
   animation: bottom-animation 2.5s forwards ease-in-out;
 }
+#root .wrapper .bottom-animation-desktop {
+  animation: bottom-animation-desktop 2.5s forwards ease-in-out;
+}
 #root .wrapper .loading {
   height: 100vw;
   transform: rotateX(90deg) rotateY(180deg) translateZ(50vh);
@@ -1501,6 +1419,9 @@ a:active {
 }
 #root .wrapper .top-animation {
   animation: top-animation 2.5s forwards ease-in-out;
+}
+#root .wrapper .top-animation-desktop {
+  animation: top-animation-desktop 2.5s forwards ease-in-out;
 }
 #root .wrapper .finish {
   overflow: hidden;
