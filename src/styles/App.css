@@ -992,7 +992,7 @@
 .finish .answers {
   display: flex;
   flex-direction: row;
-  width: 20rem;
+  width: 15rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
