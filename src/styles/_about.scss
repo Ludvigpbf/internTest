@@ -47,6 +47,11 @@
                 .linkedin {
                     color: $mango-yellow;
                     text-decoration: none;
+                    font-size: $f-xs;
+
+                    @include desktop {
+                        font-size: $f-md;
+                    }
 
                     &:hover {
                         color: $mango-yellow-hover;
@@ -88,6 +93,11 @@
 
                 span {
                     color: $mango-yellow;
+                    font-size: $f-xs;
+
+                    @include desktop {
+                        font-size: $f-md;
+                    }
                 }
             }
         }

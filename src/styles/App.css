@@ -472,6 +472,12 @@
 .about .about-content .who-card .who-info .linkedin {
   color: rgb(255, 153, 51);
   text-decoration: none;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 800px) {
+  .about .about-content .who-card .who-info .linkedin {
+    font-size: 1rem;
+  }
 }
 .about .about-content .who-card .who-info .linkedin:hover {
   color: rgb(220, 125, 31);
@@ -509,6 +515,12 @@
 }
 .about .about-content .what-card .what-info span {
   color: rgb(255, 153, 51);
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 800px) {
+  .about .about-content .what-card .what-info span {
+    font-size: 1rem;
+  }
 }
 .about .about-content .button-container {
   display: flex;
@@ -1237,7 +1249,7 @@ header .squares img {
 }
 .register .container .header-text .info .popup {
   position: absolute;
-  bottom: 7rem;
+  bottom: 5rem;
   right: 0rem;
   color: rgb(255, 153, 51);
   border-radius: 0.5rem;
