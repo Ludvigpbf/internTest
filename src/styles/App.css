@@ -1046,7 +1046,7 @@
 }
 .finish .answers .answers-block .user-box .user {
   color: rgb(255, 204, 0);
-  font-size: 0.25rem;
+  font-size: 0.3rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .user {
@@ -1056,7 +1056,7 @@
 }
 .finish .answers .answers-block .user-box .answer {
   color: white;
-  font-size: 0.25rem;
+  font-size: 0.3rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .answer {

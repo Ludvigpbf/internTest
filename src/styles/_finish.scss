@@ -72,7 +72,7 @@
 
                 .user {
                     color: $warm-yellow;
-                    font-size: $f-xxxxs;
+                    font-size: $f-xxxxms;
 
                     @include desktop {
                         font-size: $f-xs;
@@ -82,7 +82,7 @@
 
                 .answer {
                     color: white;
-                    font-size: $f-xxxxs;
+                    font-size: $f-xxxxms;
 
                     @include desktop {
                         font-size: $f-xs;
