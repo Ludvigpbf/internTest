@@ -80,7 +80,7 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
       <div className="finish-message">
         <h2>Great job, we matched! Send me an email or call me.</h2>
       </div>
-      <div className="email">
+      {/*  <div className="email">
         <div className="from row">
           <h3>
             <span>from: </span>
@@ -104,7 +104,7 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
           </p>
         </div>
       </div>
-      <button>Send</button>
+      <button>Send</button> */}
     </>
   );
 };
