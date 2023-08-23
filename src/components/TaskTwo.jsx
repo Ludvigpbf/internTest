@@ -60,8 +60,8 @@ export const TaskTwo = ({ nextQuestion }) => {
                 <input
                   type="checkbox"
                   name="option2"
-                  checked={answers.options.includes("option2")}
-                  onChange={() => handleOptionChange("option2")}
+                  checked={answers.options.includes("Free labor")}
+                  onChange={() => handleOptionChange("Free labor")}
                 />
                 <span>take advantage of the free labor of interns.</span>
               </label>
@@ -69,8 +69,12 @@ export const TaskTwo = ({ nextQuestion }) => {
                 <input
                   type="checkbox"
                   name="option3"
-                  checked={answers.options.includes("option3")}
-                  onChange={() => handleOptionChange("option3")}
+                  checked={answers.options.includes(
+                    "Have a creative environment"
+                  )}
+                  onChange={() =>
+                    handleOptionChange("Have a creative environment")
+                  }
                 />
                 <span>
                   create a work environment that is creative and open to
@@ -81,8 +85,12 @@ export const TaskTwo = ({ nextQuestion }) => {
                 <input
                   type="checkbox"
                   name="option4"
-                  checked={answers.options.includes("option4")}
-                  onChange={() => handleOptionChange("option4")}
+                  checked={answers.options.includes(
+                    "Offer experienced mentors"
+                  )}
+                  onChange={() =>
+                    handleOptionChange("Offer experienced mentors")
+                  }
                 />
                 <span>
                   offer interns the opportunity to benefit from experienced

@@ -26,7 +26,9 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
           <h2 className="question-check">An intern should:</h2>
           <div className="user-box">
             <p className="user">Ludvig:</p>
-            <p className="answer">Eager to learn</p>
+            <p className="answer">Be eager to learn,</p>
+            <p className="answer">Seek self-directed learning,</p>
+            <p className="answer">Prefer a creative environment,</p>
           </div>
           <div className="user-box">
             <p className="user">{userData.company}:</p>
@@ -39,33 +41,37 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
           </div>
         </div>
         <div className="answers-block question-two">
-          <h2 className="question-check">Question two</h2>
+          <h2 className="question-check">An internship should:</h2>
           <div className="user-box">
             <p className="user">Ludvig:</p>
-            <p className="answer">Creative</p>
+            <p className="answer">Provide clear expectations,</p>
+            <p className="answer">Have a creative environment,</p>
+            <p className="answer">Offer experienced mentors,</p>
           </div>
           <div className="user-box">
             <p className="user">{userData.company}:</p>
             {answersTwo &&
               answersTwo.map((answer, index) => (
                 <p className="answer" key={index}>
-                  {answer}
+                  {answer},
                 </p>
               ))}
           </div>
         </div>
         <div className="answers-block question-three">
-          <h2 className="question-check">Question Three</h2>
+          <h2 className="question-check">Important qualitys are:</h2>
           <div className="user-box">
             <p className="user">Ludvig:</p>
-            <p className="answer">Fun</p>
+            <p className="answer">Communicative,</p>
+            <p className="answer">Reliable,</p>
+            <p className="answer">Organized,</p>
           </div>
           <div className="user-box">
             <p className="user">{userData.company}:</p>
             {answersThree &&
               answersThree.map((answer, index) => (
                 <p className="answer" key={index}>
-                  {answer}
+                  {answer},
                 </p>
               ))}
           </div>

@@ -43,26 +43,26 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
               <input
                 type="checkbox"
                 name="option1"
-                checked={answers.options.includes("option1")}
-                onChange={() => handleOptionChange("option1")}
+                checked={answers.options.includes("Communicative")}
+                onChange={() => handleOptionChange("Communicative")}
               />
-              <span>communicative.</span>
+              <span>Communicative</span>
             </label>
             <label className="custom-checkbox">
               <input
                 type="checkbox"
                 name="option2"
-                checked={answers.options.includes("option2")}
-                onChange={() => handleOptionChange("option2")}
+                checked={answers.options.includes("Reliable")}
+                onChange={() => handleOptionChange("Reliable")}
               />
-              <span>Eager to learn</span>
+              <span>Reliable</span>
             </label>
             <label className="custom-checkbox">
               <input
                 type="checkbox"
                 name="option3"
-                checked={answers.options.includes("option3")}
-                onChange={() => handleOptionChange("option3")}
+                checked={answers.options.includes("Organized")}
+                onChange={() => handleOptionChange("Organized")}
               />
               <span>Organized</span>
             </label>
@@ -70,10 +70,10 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
               <input
                 type="checkbox"
                 name="fun"
-                checked={answers.options.includes("option4")}
-                onChange={() => handleOptionChange("option4")}
+                checked={answers.options.includes("Grumpy")}
+                onChange={() => handleOptionChange("Grumpy")}
               />
-              <span>Fun</span>
+              <span>Grumpy</span>
             </label>
           </div>
         </div>

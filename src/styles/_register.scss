@@ -14,10 +14,12 @@
         .header-text {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            justify-content: center;
 
             h1 {
                 color: $mango-yellow;
-                font-size: $f-lg;
+                font-size: $f-md;
 
                 @include desktop {
                     font-size: $f-xl;

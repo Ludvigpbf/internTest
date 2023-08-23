@@ -139,7 +139,7 @@
     transform: translateZ(-100vw) rotateY(-180deg) rotateX(-90deg);
   }
   100% {
-    transform: translateZ(-50vw) rotateY(-180deg) rotateX(-90deg);
+    transform: translateZ(-45vw) rotateY(-180deg) rotateX(-90deg);
   }
 }
 @keyframes bottom-animation-desktop {
@@ -1221,10 +1221,12 @@ header .squares img {
 .register .container .header-text {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .register .container .header-text h1 {
   color: rgb(255, 153, 51);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media screen and (min-width: 800px) {
   .register .container .header-text h1 {
