@@ -1022,7 +1022,7 @@
   color: rgb(220, 125, 31);
   align-self: center;
   margin: 0.5rem 0.5rem 0.1rem 0.5rem;
-  font-size: 0.35rem;
+  font-size: 0.5rem;
   text-decoration: underline;
   text-underline-offset: 0.1rem;
 }
@@ -1046,7 +1046,7 @@
 }
 .finish .answers .answers-block .user-box .user {
   color: rgb(255, 153, 51);
-  font-size: 0.25rem;
+  font-size: 0.35rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .user {
@@ -1056,7 +1056,7 @@
 }
 .finish .answers .answers-block .user-box .answer {
   color: rgb(204, 204, 204);
-  font-size: 0.25rem;
+  font-size: 0.35rem;
 }
 @media screen and (min-width: 800px) {
   .finish .answers .answers-block .user-box .answer {

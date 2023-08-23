@@ -49,7 +49,7 @@
                 color: $mango-yellow-hover;
                 align-self: center;
                 margin: 0.5rem 0.5rem 0.1rem 0.5rem;
-                font-size: $f-xxxs;
+                font-size: $f-xxs;
                 text-decoration: underline;
                 text-underline-offset: 0.1rem;
 
@@ -72,7 +72,7 @@
 
                 .user {
                     color: $mango-yellow;
-                    font-size: $f-xxxxs;
+                    font-size: $f-xxxs;
 
                     @include desktop {
                         font-size: $f-xs;
@@ -82,7 +82,7 @@
 
                 .answer {
                     color: $light-gray;
-                    font-size: $f-xxxxs;
+                    font-size: $f-xxxs;
 
                     @include desktop {
                         font-size: $f-xs;
