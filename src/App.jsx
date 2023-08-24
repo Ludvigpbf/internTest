@@ -23,10 +23,24 @@ function App() {
   const [answersOne, setAnswersOne] = useState([]);
   const [answersTwo, setAnswersTwo] = useState([]);
   const [answersThree, setAnswersThree] = useState([]);
+  /*  document.addEventListener("keydown", function (e) {
+    // Check if the pressed key is Enter
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent the default action
+    }
+  }); */
   document.addEventListener("keydown", function (e) {
     // Check if the pressed key is Enter (key code 13)
-    if (e.keyCode === 13) {
-      e.preventDefault(); // Prevent the default action
+    if (e.key === "Enter") {
+      // Check if the active element is an input field or button
+      if (
+        document.activeElement.tagName === "INPUT" ||
+        document.activeElement.tagName === "BUTTON"
+      ) {
+        return; // Allow Enter to work inside input fields and buttons
+      } else {
+        e.preventDefault(); // Prevent the default action for other elements
+      }
     }
   });
 
