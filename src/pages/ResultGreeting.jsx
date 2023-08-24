@@ -7,10 +7,10 @@ export const Greeting = ({ onClickNext, showGreeting, userData }) => {
     onClickNext: PropTypes.func.isRequired,
     showGreeting: PropTypes.bool.isRequired,
     userData: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      company: PropTypes.string.isRequired,
-    }).isRequired,
+      name: PropTypes.string,
+      role: PropTypes.string,
+      company: PropTypes.string,
+    }),
   };
   return (
     <div className="greeting-content">
@@ -22,12 +22,11 @@ export const Greeting = ({ onClickNext, showGreeting, userData }) => {
         <p className="paragraph-1">
           Wow, so you work as <span className="role">{userData.role} </span>
           at <span className="company">{userData.company}</span>. Impressive!
-          Maby one day I&apos;ll work there to!
         </p>
         <p className="paragraph-2">
-          Well thank you <span>{userData.name}</span> for taking the time to do
-          this quiz, it means alot to me. I hope you had fun, I sure had. Did
-          you know I made it with React, SCSS and alot of coffee?
+          Thank you <span>{userData.name}</span> for taking the time to do this
+          quiz, it means alot to me. I hope you had fun, I sure had. Did you
+          know I made it with React, SCSS and alot of coffee?
         </p>
         <p className="result-link">
           Click{" "}

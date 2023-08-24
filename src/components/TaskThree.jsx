@@ -84,7 +84,9 @@ export const TaskThree = ({ onClickNext, setCheckAnswers }) => {
         )}
         <button
           onClick={() => {
-            onClickNext();
+            if (answers.options.length > 0) {
+              onClickNext();
+            }
           }}
         >
           Submit

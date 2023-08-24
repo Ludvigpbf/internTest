@@ -19,7 +19,7 @@ export const Landing = ({ onClickNext, isClicked }) => {
         <div className="introduction">
           <h1 className="me">
             I&apos;m <span className="first-name">Ludvig Flyckt</span>
-          </h1>
+          </h1>{" "}
           <p className="introduction-text">
             I&apos;m currently studying to become a<br />
             <span className="work-title">Fullstack developer</span> and I am

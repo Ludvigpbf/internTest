@@ -1,20 +1,58 @@
-/* import { useEffect, useState } from "react"; */
+import github from "../assets/github.png";
+import mail from "../assets/mail.png";
+import linkedin from "../assets/linkedin.png";
+import phone from "../assets/phone.png";
 import Header from "../components/Header.jsx";
 import PropTypes from "prop-types";
 
 export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
   Finish.propTypes = {
     userData: PropTypes.shape({
-      onClickNext: PropTypes.func.isRequired,
-      showGreeting: PropTypes.bool.isRequired,
-      name: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      company: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    }).isRequired,
-    answersOne: PropTypes.string.isRequired,
-    answersTwo: PropTypes.string.isRequired,
-    answersThree: PropTypes.string.isRequired,
+      onClickNext: PropTypes.func,
+      showGreeting: PropTypes.bool,
+      name: PropTypes.string,
+      role: PropTypes.string,
+      company: PropTypes.string,
+      email: PropTypes.string,
+    }),
+    answersOne: PropTypes.arrayOf(PropTypes.string),
+    answersTwo: PropTypes.arrayOf(PropTypes.string),
+    answersThree: PropTypes.arrayOf(PropTypes.string),
+  };
+
+  const getFinishMessage = () => {
+    const isWrongAnswersSelected =
+      answersOne.includes("Ignore feedback") ||
+      answersTwo.includes("Free labor") ||
+      answersThree.includes("Grumpy");
+
+    const isCorrectAnswersSelected =
+      (answersOne.includes("Be eager to learn") ? 1 : 0) +
+      (answersOne.includes("Seek self-directed learning") ? 1 : 0) +
+      (answersOne.includes("Prefer a creative environment") ? 1 : 0) +
+      (answersTwo.includes("Provide clear expectations") ? 1 : 0) +
+      (answersTwo.includes("Have a creative environment") ? 1 : 0) +
+      (answersTwo.includes("Offer experienced mentors") ? 1 : 0) +
+      (answersThree.includes("Communicative") ? 1 : 0) +
+      (answersThree.includes("Reliable") ? 1 : 0) +
+      (answersThree.includes("Organized") ? 1 : 0);
+
+    // Handle different cases and return the appropriate message
+    if (isWrongAnswersSelected && isCorrectAnswersSelected > 0) {
+      return "We might not look eye to eye on everything.. but hey, give me a holler!";
+    } else if (!isWrongAnswersSelected && isCorrectAnswersSelected === 9) {
+      return "Wow spot on! Looks like a perfect fit! Please contact me so we can set up a meeting.";
+    } else if (
+      !isWrongAnswersSelected &&
+      isCorrectAnswersSelected < 9 &&
+      isCorrectAnswersSelected > 0
+    ) {
+      return "Maby not 10 of 10 but I like the odds! Please contact me so we can set up a meeting.";
+    } else if (isWrongAnswersSelected && isCorrectAnswersSelected === 0) {
+      return "We really don't match. You may need to reconsider some things..";
+    } else {
+      return "Seems something went wrong, please try again.";
+    }
   };
 
   return (
@@ -30,11 +68,19 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
             <p className="answer">Seek self-directed learning,</p>
             <p className="answer">Prefer a creative environment,</p>
           </div>
+          <Header />
           <div className="user-box">
             <p className="user">{userData.company}:</p>
             {answersOne &&
               answersOne.map((answer, index) => (
-                <p className="answer" key={index}>
+                <p
+                  className={`answer ${
+                    "Ignore feedback".includes(answer)
+                      ? "wrong-answer"
+                      : "correct-answer"
+                  }`}
+                  key={index}
+                >
                   {answer},
                 </p>
               ))}
@@ -52,7 +98,14 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
             <p className="user">{userData.company}:</p>
             {answersTwo &&
               answersTwo.map((answer, index) => (
-                <p className="answer" key={index}>
+                <p
+                  className={`answer ${
+                    "Free labor".includes(answer)
+                      ? "wrong-answer"
+                      : "correct-answer"
+                  }`}
+                  key={index}
+                >
                   {answer},
                 </p>
               ))}
@@ -70,42 +123,45 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
             <p className="user">{userData.company}:</p>
             {answersThree &&
               answersThree.map((answer, index) => (
-                <p className="answer" key={index}>
+                <p
+                  className={`answer ${
+                    "Grumpy".includes(answer)
+                      ? "wrong-answer"
+                      : "correct-answer"
+                  }`}
+                  key={index}
+                >
                   {answer},
                 </p>
               ))}
           </div>
         </div>
       </div>
+      &apos;
       <div className="finish-message">
-        <h2>Great job, we matched! Send me an email or call me.</h2>
+        <h2>{getFinishMessage()}</h2>
       </div>
+      <div className="links">
+        <a
+          href="https://www.linkedin.com/in/ludvigflyckt"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={linkedin} alt="LinkedIn" />
+        </a>
 
-      {/*  <div className="email">
-        <div className="from row">
-          <h3>
-            <span>from: </span>
-            {userData.email}
-          </h3>
-        </div>
-        <div className="to row">
-          <h3>
-            <span>to: </span> info@ludvigflyckt.com
-          </h3>
-        </div>
-        <div className="subject row">
-          <h3>
-            <span>about: </span> Intership at {userData.company}
-          </h3>
-        </div>
-        <div className="mail-content-box">
-          <p className="mail-content">
-            Hi Ludvig! My name is {userData.name} and Im the {userData.role} at{" "}
-            {userData.company}
-          </p>
-        </div>
+        <a href="https://github.com/Ludvigpbf" target="_blank" rel="noreferrer">
+          <img src={github} alt="GitHub" />
+        </a>
+
+        <a href="mailto:contact@ludvigflyckt.com">
+          <img src={mail} alt="Email" />
+        </a>
+
+        <a href="tel:+46707983878">
+          <img className="phone" src={phone} alt="Phone" />
+        </a>
       </div>
-      <button>Send</button> */}
     </>
   );
 };

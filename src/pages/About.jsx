@@ -5,29 +5,18 @@ export const About = ({ onClickNext, showLine }) => {
       <div className="who-card">
         <h2 className="who-title">So who am i?</h2>
         <p className="who-info">
-          My name is Ludvig Flyckt, 32 y/o and live in Stockholm/Sweden with my
-          wife, daughter and labrador. Ive been working in the restaurant
-          buisness for 14 years and the last 6 years in leading positions. I
-          started my journey to become a Fullstack Developer at Chas Acadamy in
-          August 2022 and will graduate june 2024. In October 2023, my intership
-          starts and will last until March 2024. For more information about me
-          please visit my{" "}
-          <a
-            href="https://www.linkedin.com/in/ludvigflyckt/"
-            className="linkedin"
-          >
-            Linkedin
-          </a>
-          .
+          My name is Ludvig Flyckt. I am 32 years old and live in Stockholm,
+          Sweden, with my wife, daughter, and Labrador. I have been working in
+          the restaurant business for 14 years, with the last 6 years in
+          leadership positions. I began my journey to become a Fullstack
+          Developer at Chas Academy in August 2022 and will graduate in June
+          2024. My internship is scheduled to start at the end of October 2023
+          and will last until April 2024.
         </p>
       </div>
       <div className="what-card">
         <h2 className="what-title">What is this?</h2>
         <p className="what-info">
-          {/* To find my dream intership I made this quiz to see if I can find a
-          place that is as creative as me and like to think outside the box,
-          literary. The quiz consist of three questions, all with multiple
-          answerchoises. At the end we'll see if we are a match or not. */}
           In my quest for the perfect internship, I&apos;ve put together a fun
           quiz. It&apos;s a way to see if I can find a place that&apos;s as
           creative and out-of-the-box thinking as I am. The quiz consists of
