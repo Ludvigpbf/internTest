@@ -901,7 +901,7 @@
 }
 .result-greeting .greeting-content .show-content h1 {
   color: rgb(204, 204, 204);
-  font-size: 4rem;
+  font-size: 3vw;
   font-weight: 300;
   margin: -0.1rem;
 }
@@ -911,7 +911,7 @@
   }
 }
 .result-greeting .greeting-content .show-content h1 .username {
-  font-size: 4rem;
+  font-size: 3vw;
   color: rgb(255, 153, 51);
   font-weight: 500;
 }
