@@ -1094,7 +1094,12 @@
 }
 .finish .links a {
   cursor: url("src/assets/cursor5.png"), pointer;
-  margin: 1rem;
+  margin: 0.6rem;
+}
+@media screen and (min-width: 800px) {
+  .finish .links a {
+    margin: 1rem;
+  }
 }
 .finish .links a img {
   width: 1.5rem;

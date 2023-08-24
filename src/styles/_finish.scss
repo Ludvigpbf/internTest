@@ -137,7 +137,11 @@
         a {
             cursor: url('src/assets/cursor5.png'), pointer;
 
-            margin: 1rem;
+            margin: 0.6rem;
+
+            @include desktop {
+                margin: 1rem;
+            }
 
             img {
                 width: 1.5rem;
