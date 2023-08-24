@@ -137,7 +137,6 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
           </div>
         </div>
       </div>
-      &apos;
       <div className="finish-message">
         <h2>{getFinishMessage()}</h2>
       </div>
