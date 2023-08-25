@@ -12,6 +12,8 @@ import ResultGreeting from "./pages/ResultGreeting.jsx";
 import Finish from "./pages/Finish.jsx";
 
 function App() {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   const [currentPage, setCurrentPage] = useState("landing");
   const [isClicked, setIsClicked] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
