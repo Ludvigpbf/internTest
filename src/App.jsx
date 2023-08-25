@@ -1,3 +1,6 @@
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-YY6R2HSR87"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 import { useEffect, useState } from "react";
 
 import Header from "./components/Header.jsx";
