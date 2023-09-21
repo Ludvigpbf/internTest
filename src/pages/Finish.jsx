@@ -153,7 +153,7 @@ export const Finish = ({ userData, answersOne, answersTwo, answersThree }) => {
           <img src={github} alt="GitHub" />
         </a>
 
-        <a href="mailto:contact@ludvigflyckt.com">
+        <a href="mailto:ludvig.flyckt@gmail.com">
           <img src={mail} alt="Email" />
         </a>
 
